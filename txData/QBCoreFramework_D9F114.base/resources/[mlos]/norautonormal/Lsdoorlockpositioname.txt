@@ -1,0 +1,22 @@
+Ls custom Patoche Lockdoor :
+
+NAME
+POSITION X Y Z
+
+prop_com_ls_door_01
+X:-349,4955 Y:-117,2882 Z:40,03106
+
+prop_com_ls_door_01
+X:-356,0905 Y:-134,7714 Z:40,01295
+
+portels_3
+X:-321,6734 Y:-141,1798 Z:39,62553
+
+apa_v_ilev_ss_door7
+X:-320,8858 Y:-138,8524 Z:39,12236
+
+apa_v_ilev_ss_door8
+X:-312,1631 Y:-115,2423 Z:39,1126
+
+apa_v_ilev_ss_door8
+X:-353,8613 Y:-127,7614 Z:39,53282
