@@ -39,5 +39,8 @@ luac.out
 
 txData/QBCoreFramework_D9F114.base/cache
 txData/default
+txData/QBCoreFramework_D9F114.base/server.cfg
+txData/QBCoreFramework_D9F114.base/server.cfg.bkp
+
 txData/admins.json
 server/crashes
