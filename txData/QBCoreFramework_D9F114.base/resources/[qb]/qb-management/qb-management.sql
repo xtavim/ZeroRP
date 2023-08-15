@@ -17,6 +17,7 @@ INSERT INTO `management_funds` (`job_name`, `amount`, `type`) VALUES
 ('cardealer', 0, 'boss'),
 ('mechanic', 0, 'boss'),
 ('lostmc', 0, 'gang'),
+('bloods', 0, 'gang'),
 ('ballas', 0, 'gang'),
 ('vagos', 0, 'gang'),
 ('cartel', 0, 'gang'),

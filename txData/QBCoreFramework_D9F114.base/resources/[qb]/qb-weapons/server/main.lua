@@ -2,7 +2,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 -- Functions
 
---[[ local function IsWeaponBlocked(WeaponName)
+local function IsWeaponBlocked(WeaponName)
     local retval = false
     for _, name in pairs(Config.DurabilityBlockedWeapons) do
         if name == WeaponName then
@@ -11,7 +11,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
         end
     end
     return retval
-end ]]
+end
 
 local function HasAttachment(component, attachments)
     local retval = false
@@ -182,16 +182,16 @@ RegisterNetEvent("weapons:server:TakeBackWeapon", function(k)
     TriggerClientEvent('weapons:client:SyncRepairShops', -1, Config.WeaponRepairPoints[k], k)
 end)
 
---[[ RegisterNetEvent("weapons:server:SetWeaponQuality", function(data, hp)
+RegisterNetEvent("weapons:server:SetWeaponQuality", function(data, hp)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     if not Player then return end
     local WeaponSlot = Player.PlayerData.items[data.slot]
     WeaponSlot.info.quality = hp
     Player.Functions.SetInventory(Player.PlayerData.items, true)
-end) ]]
+end)
 
---[[ RegisterNetEvent('weapons:server:UpdateWeaponQuality', function(data, RepeatAmount)
+RegisterNetEvent('weapons:server:UpdateWeaponQuality', function(data, RepeatAmount)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local WeaponData = QBCore.Shared.Weapons[GetHashKey(data.name)]
@@ -226,7 +226,7 @@ end) ]]
         end
     end
     Player.Functions.SetInventory(Player.PlayerData.items, true)
-end) ]]
+end)
 
 RegisterNetEvent("weapons:server:EquipAttachment", function(ItemData, CurrentWeaponData, AttachmentData)
     local src = source
@@ -293,9 +293,9 @@ end)
 
 -- Commands
 
---[[ QBCore.Commands.Add("repairweapon", "Repair Weapon (God Only)", {{name="hp", help=Lang:t('info.hp_of_weapon')}}, true, function(source, args)
+QBCore.Commands.Add("repairweapon", "Repair Weapon (God Only)", {{name="hp", help=Lang:t('info.hp_of_weapon')}}, true, function(source, args)
     TriggerClientEvent('weapons:client:SetWeaponQuality', source, tonumber(args[1]))
-end, "god") ]]
+end, "god")
 
 -- Items
 

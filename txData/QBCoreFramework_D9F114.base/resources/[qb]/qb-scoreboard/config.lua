@@ -13,28 +13,23 @@ Config.IllegalActions = {
     ["storerobbery"] = {
         minimumPolice = 2,
         busy = false,
-        label = "Store Robbery",
+        label = "Assalto a Lojas",
+    },
+    ["jewellery"] = {
+        minimumPolice = 8,
+        busy = false,
+        label = "Joalharia"
+    },
+    ["pacific"] = {
+        minimumPolice = 8,
+        busy = false,
+        label = "Banco Principal"
     },
     ["bankrobbery"] = {
         minimumPolice = 3,
         busy = false,
-        label = "Bank Robbery"
+        label = "Assalto a Bancos"
     },
-    ["jewellery"] = {
-        minimumPolice = 2,
-        busy = false,
-        label = "Jewellery"
-    },
-    ["pacific"] = {
-        minimumPolice = 5,
-        busy = false,
-        label = "Pacific Bank"
-    },
-    ["paleto"] = {
-        minimumPolice = 4,
-        busy = false,
-        label = "Paleto Bay Bank"
-    }
 }
 
 -- Show ID's for all players or Opted in Staff

@@ -41,6 +41,13 @@ const app = Vue.createApp({
 
     const intervals = [ null, null, null ]
 
+    const toggleLoading = id => {
+      const loading = !progress.value[ id ].loading;
+
+      progress.value[ id ].loading = loading;
+      progress.value[ id ].percentage = loading ? 0 : 100;
+    }
+
     function startComputing (id) {
       progress.value[ id ].loading = true
       progress.value[ id ].percentage = 0
@@ -67,10 +74,11 @@ const app = Vue.createApp({
         ]
       },
       tab: ref('hud'),
-      splitterModel: ref(20),
+      // splitterModel: ref(20),
       selection: ref([]),
       progress,
       startComputing,
+      toggleLoading
     }
   },
   watch: {
@@ -382,6 +390,10 @@ const app = Vue.createApp({
       targetId = event.currentTarget.id;
       restartHud()
     },
+    rescaleHud: function(event) {
+      targetId = event.currentTarget.id;
+      rescaleHud()
+    },
     showOutMap: function(event) {
       targetId = event.currentTarget.id;
       showOutMap()
@@ -516,6 +528,9 @@ function closeMenu() {
 function restartHud() {
   closeMenu()
   $.post('https://qb-hud/restartHud');
+}
+function rescaleHud() {
+  
 }
 function resetStorage() {
   closeMenu()

@@ -263,6 +263,20 @@ Config.Garages = {
         ["job"] = "cartel",
         ["jobType"] = "cartel"
     },
+    ["bloods"] = {
+        ["label"] = "Bloods",
+        ["takeVehicle"] = vector3(1, 1, 1),
+        ["spawnPoint"] = vector4(1, 1, 1, 1),
+        ["putVehicle"] = vector3(1, 1, 1),
+        ["showBlip"] = false,
+        ["blipName"] = "Bloods",
+        ["blipNumber"] = 357,
+        ["blipColor"] = 3,
+        ["type"] = "gang",                --public, job, gang, depot
+        ["vehicle"] = "car",              --car, air, sea, rig
+        ["job"] = "blood",
+        ["jobType"] = "bloods"
+    },
     ["police"] = {
         ["label"] = "Police",
         ["takeVehicle"] = vector3(454.6, -1017.4, 28.4),

@@ -34,12 +34,12 @@ Config.RestrictedChannels = {
     [8] = {
         police = false,
         ambulance = true
-    }
+    },
     -- Police & Ambulance
     [9] = {
         police = true,
         ambulance = true
-    }
+    },
     [10] = {
         police = true,
         ambulance = true

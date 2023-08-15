@@ -2,12 +2,12 @@ Config = Config or {}
 
 Config.ReloadTime = math.random(4000, 6000)
 
-/* Config.DurabilityBlockedWeapons = {
+Config.DurabilityBlockedWeapons = {
     "weapon_stungun",
     "weapon_nightstick",
     "weapon_flashlight",
     "weapon_unarmed",
-} */
+}
 
 Config.Throwables = {
     "ball",
@@ -22,7 +22,7 @@ Config.Throwables = {
     "stickybomb",
 }
 
-/* Config.DurabilityMultiplier = {
+Config.DurabilityMultiplier = {
     -- Melee
     -- ['weapon_unarmed'] 				 = 0.15,
     ['weapon_dagger']                = 0.15,
@@ -152,7 +152,7 @@ Config.Throwables = {
     ['weapon_fireextinguisher']      = 0.15,
     ['weapon_hazardcan']             = 0.15,
     ['weapon_fertilizercan']         = 0.15,
-} 
+}
 
 Config.WeaponRepairPoints = {
     [1] = {
@@ -169,7 +169,7 @@ Config.WeaponRepairCosts = {
     ["rifle"] = 5000,
     ["sniper"] = 7000,
     ["shotgun"] = 6000
-} */
+}
 
 WeaponAttachments = {
     -- PISTOLS

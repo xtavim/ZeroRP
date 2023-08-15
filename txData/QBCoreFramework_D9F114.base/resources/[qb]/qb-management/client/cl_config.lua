@@ -60,6 +60,9 @@ Config.GangMenus = {
     ['families'] = {
         vector3(0, 0, 0),
     },
+    ['bloods'] = {
+        vector3(0, 0, 0),
+    },
 }
 
 Config.GangMenuZones = {

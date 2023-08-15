@@ -68,11 +68,11 @@ RegisterNetEvent('weapons:client:SetCurrentWeapon', function(data, bool)
     CanShoot = bool
 end)
 
---[[ RegisterNetEvent('weapons:client:SetWeaponQuality', function(amount)
+RegisterNetEvent('weapons:client:SetWeaponQuality', function(amount)
     if CurrentWeaponData and next(CurrentWeaponData) then
         TriggerServerEvent("weapons:server:SetWeaponQuality", CurrentWeaponData, amount)
     end
-end) ]]
+end)
 
 RegisterNetEvent('weapons:client:AddAmmo', function(type, amount, itemData)
     local ped = PlayerPedId()
@@ -141,10 +141,10 @@ CreateThread(function()
             local weapon = GetSelectedPedWeapon(ped)
             local ammo = GetAmmoInPedWeapon(ped, weapon)
             TriggerServerEvent("weapons:server:UpdateWeaponAmmo", CurrentWeaponData, tonumber(ammo))
-            --[[ if MultiplierAmount > 0 then
+            if MultiplierAmount > 0 then
                 TriggerServerEvent("weapons:server:UpdateWeaponQuality", CurrentWeaponData, MultiplierAmount)
                 MultiplierAmount = 0
-            end ]]
+            end
         end
         Wait(0)
     end

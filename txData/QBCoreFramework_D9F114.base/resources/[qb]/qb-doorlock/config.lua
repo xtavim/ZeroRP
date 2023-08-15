@@ -1266,4 +1266,117 @@ Config.DoorList = {
 		pickable = false,
 		distance = 2.0
 	},
+	-- Bloods	
+	-- Front Door
+	{
+		objName = 'prop_sm1_11_doorr',
+		doors = { 
+			{
+				objName = 'prop_sm1_11_doorr', 
+				objYaw = 45, -- Heading of the door. Alias: objHeading = 135.0,
+				objCoords = vec3(-1565.58, -406.92, 42.61), -- Object coords
+			},
+
+			{
+				objName = 'prop_sm1_11_doorl',
+				objYaw = 45,  -- Heading of the door. Alias: objHeading = -45.0,
+				objCoords = vec3(-1564.01, -405.04, 42.61), -- Object coords
+			},
+		},
+		doorType = 'double',
+		textCoords = vec3(-1565.58, -406.92, 42.61),
+		fixText = true,
+		authorizedGangs = { ['bloods'] = 0 },
+		locked = true,
+		pickable = false,
+		distance = 1.5,
+		autoLock = 60000 -- 1min
+	},
+	-- Garage Door
+	{
+		objHash = 1641308239,
+		objCoords  = vec3(-1558.9, -398.72, 42.34),
+		textCoords = vec3(-1558.9, -398.72, 42.34),
+		authorizedGangs = { 'bloods' },
+		objYaw = 45.0,
+		locked = true,
+		pickable = false,
+		distance = 2.0,
+		doorType = 'garage'
+	},
+	-- Garage to Cave
+	-- All Cave Doors
+	{
+		objHash = 1508636830,
+		objCoords  = vec3(-1565.99, -378.91, 38.25),
+		textCoords = vec3(-1565.99, -378.91, 38.25),
+		authorizedGangs = { 'bloods' },
+		objYaw = 45.0,
+		locked = true,
+		pickable = false,
+		distance = 2.0
+	},
+	{
+		objHash = 1508636830,
+		objCoords  = vec3(-1567.61, -375.93, 38.25),
+		textCoords = vec3(-1567.61, -375.93, 38.25),
+		authorizedGangs = { 'bloods' },
+		objYaw = 45.0,
+		locked = true,
+		pickable = false,
+		distance = 2.0
+	},
+	{
+		objHash = 1508636830,
+		objCoords  = vec3(-1570.11, -378.61, 38.25),
+		textCoords = vec3(-1570.11, -378.61, 38.25),
+		authorizedGangs = { 'bloods' },
+		objYaw = 45.0,
+		locked = true,
+		pickable = false,
+		distance = 2.0
+	},
+	{
+		objHash = 1508636830,
+		objCoords  = vec3(-1568.59, -381.77, 38.25),
+		textCoords = vec3(-1568.59, -381.77, 38.25),
+		authorizedGangs = { 'bloods' },
+		objYaw = 45.0,
+		locked = true,
+		pickable = false,
+		distance = 2.0
+	},
+	{
+		objHash = 1508636830,
+		objCoords  = vec3(-1571.03, -384.46, 38.25),
+		textCoords = vec3(-1571.03, -384.46, 38.25),
+		authorizedGangs = { 'bloods' },
+		objYaw = 45.0,
+		locked = true,
+		pickable = false,
+		distance = 2.0
+	},
+	{
+		objHash = 1508636830,
+		objCoords  = vec3(-1572.7, -381.4, 38.25),
+		textCoords = vec3(-1572.7, -381.4, 38.25),
+		authorizedGangs = { 'bloods' },
+		objYaw = 45.0,
+		locked = true,
+		pickable = false,
+		distance = 2.0
+	},
+	-- 2nd Floor Outside Door
+	{
+		objHash = -1585441135,
+		objCoords  = vec3(-1563.36, -408.44, 47.34),
+		textCoords = vec3(-1563.36, -408.44, 47.34),
+		authorizedGangs = { 'bloods' },
+		objYaw = 0,
+		locked = true,
+		pickable = false,
+		distance = 2.0,
+		doorRate = 5.0,
+		doorType = 'sliding'
+	},
 }
