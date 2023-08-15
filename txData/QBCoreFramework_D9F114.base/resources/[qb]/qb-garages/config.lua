@@ -222,18 +222,32 @@ Config.Garages = {
         ["jobType"] = "ballas"
     },
     ["families"] = {
-        ["label"] = "La Familia",
+        ["label"] = "Families",
         ["takeVehicle"] = vector3(-811.65, 187.49, 72.48),
         ["spawnPoint"] = vector4(-818.43, 184.97, 72.28, 107.85),
         ["putVehicle"] = vector3(-811.65, 187.49, 72.48),
         ["showBlip"] = false,
-        ["blipName"] = "La Familia",
+        ["blipName"] = "Families",
         ["blipNumber"] = 357,
         ["blipColor"] = 3,
         ["type"] = "gang",                --public, job, gang, depot
         ["vehicle"] = "car",              --car, air, sea, rig
         ["job"] = "families",
         ["jobType"] = "families"
+    },
+    ["russa"] = {
+        ["label"] = "Russa",
+        ["takeVehicle"] = vector3(-811.65, 187.49, 72.48),
+        ["spawnPoint"] = vector4(-818.43, 184.97, 72.28, 107.85),
+        ["putVehicle"] = vector3(-811.65, 187.49, 72.48),
+        ["showBlip"] = false,
+        ["blipName"] = "Russa",
+        ["blipNumber"] = 357,
+        ["blipColor"] = 3,
+        ["type"] = "gang",                --public, job, gang, depot
+        ["vehicle"] = "car",              --car, air, sea, rig
+        ["job"] = "russa",
+        ["jobType"] = "russa"
     },
     ["lostmc"] = {
         ["label"] = "Lost MC",

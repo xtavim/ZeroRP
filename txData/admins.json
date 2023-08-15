@@ -1,18 +1,18 @@
 [
   {
-    "name": "xtav1m",
+    "name": "KiritoMaster5",
     "master": true,
-    "password_hash": "$2a$11$TkVxGav/8UqcJStXPjworuXNBYGNDmgciMO3sfYGsNhT3aLaKtSui",
+    "password_hash": "$2a$11$ROmFpPrtHWmTNrkoJsienOnYaUqLBMGdY121n8qfYcgi2wVqDaMVq",
     "providers": {
       "citizenfx": {
-        "id": "xtav1m",
-        "identifier": "fivem:10293686",
+        "id": "KiritoMaster5",
+        "identifier": "fivem:2068883",
         "data": {
-          "sub": "80c3544cc2290fd467bde8d4be6df75c",
-          "nameid": "https://forum.cfx.re/internal/user/10293686",
-          "name": "xtav1m",
-          "picture": "https://forum.cfx.re/user_avatar/forum.cfx.re/xtav1m/256/3773919_2.png",
-          "profile": "https://forum.cfx.re/u/xtav1m"
+          "sub": "45e7a9e45f258db91313b4d83391c9ff",
+          "nameid": "https://forum.cfx.re/internal/user/2068883",
+          "name": "KiritoMaster5",
+          "picture": "https://forum.cfx.re/user_avatar/forum.cfx.re/kiritomaster5/256/1121951_2.png",
+          "profile": "https://forum.cfx.re/u/KiritoMaster5"
         }
       }
     },
