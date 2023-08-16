@@ -50,7 +50,7 @@ Config.PhoneApplications = {
     },
     ["garage"] = {
         app = "garage",
-        img = "icon-gallery.png",
+        img = "icon-garage.png",
         tooltipText = "Vehicles",
         job = false,
         blockedjobs = {},
@@ -95,7 +95,7 @@ Config.PhoneApplications = {
     },
     ["racing"] = {
         app = "racing",
-        img = "icon-gallery.png",
+        img = "icon-racing.png",
         tooltipText = "Racing",
         job = false,
         blockedjobs = {},
@@ -113,7 +113,7 @@ Config.PhoneApplications = {
     },
     ["lawyers"] = {
         app = "lawyers",
-        img = "icon-gallery.png",
+        img = "icon-services.png",
         tooltipText = "Services",
         tooltipPos = "bottom",
         job = false,

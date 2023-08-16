@@ -2,15 +2,15 @@ var CurrentTwitterTab = "twitter-home"
 var HashtagOpen = false;
 var MinimumTrending = 100;
 
-$(document).on('click', '.twitter-header-tab', function(e){
+$(document).on('click', '.twitter-footer-tab', function(e){
     e.preventDefault();
 
     var PressedTwitterTab = $(this).data('twittertab');
-    var PreviousTwitterTabObject = $('.twitter-header').find('[data-twittertab="'+CurrentTwitterTab+'"]');
+    var PreviousTwitterTabObject = $('.twitter-footer').find('[data-twittertab="'+CurrentTwitterTab+'"]');
 
     if (PressedTwitterTab !== CurrentTwitterTab) {
-        $(this).addClass('selected-twitter-header-tab');
-        $(PreviousTwitterTabObject).removeClass('selected-twitter-header-tab');
+        $(this).addClass('selected-twitter-footer-tab');
+        $(PreviousTwitterTabObject).removeClass('selected-twitter-footer-tab');
 
         $("."+CurrentTwitterTab+"-tab").css({"display":"none"});
         $("."+PressedTwitterTab+"-tab").css({"display":"block"});
@@ -85,13 +85,15 @@ QB.Phone.Notifications.LoadTweets = function(Tweets) {
     if (Tweets !== null && Tweets !== undefined && Tweets !== "" && Tweets.length > 0) {
         $(".twitter-home-tab").html("");
         $.each(Tweets, function(i, Tweet){
+            $(".twitter-home-tab").append('<div class="line-spacer"></div>');
+            
             var clean = DOMPurify.sanitize(Tweet.message , {
                 ALLOWED_TAGS: [],
                 ALLOWED_ATTR: []
             });
             if (clean == '') clean = 'Hmm, I shouldn\'t be able to do this...'
             var TwtMessage = QB.Phone.Functions.FormatTwitterMessage(clean);
-            var TimeAgo = moment(Tweet.date).format('MM/DD/YYYY hh:mm');
+            var TimeAgo = moment(Tweet.date).format('DD/MM/YYYY hh:mm');
 
             var TwitterHandle = Tweet.firstName + ' ' + Tweet.lastName
             var PictureUrl = "./img/default.png"
@@ -100,18 +102,26 @@ QB.Phone.Notifications.LoadTweets = function(Tweets) {
             }
 
             if (Tweet.url == "") {
-                let TweetElement = '<div class="twitter-tweet" data-twtcid="'+Tweet.citizenid+'" data-twtid ="'+Tweet.tweetId+'" data-twthandler="@' + TwitterHandle.replace(" ", "_") + '"><div class="tweet-reply"><i class="fas fa-reply"></i></div>' +
+                let TweetElement = '<div class="twitter-tweet" data-twtcid="'+Tweet.citizenid+'" data-twtid ="'+Tweet.tweetId+'" data-twthandler="@' + TwitterHandle.replace(" ", "_") + '">' +
                     '<div class="tweet-tweeter">' + Tweet.firstName + ' ' + Tweet.lastName + ' &nbsp;<span>@' + TwitterHandle.replace(" ", "_") + ' &middot; ' + TimeAgo + '</span></div>' +
                     '<div class="tweet-message">' + TwtMessage + '</div>' +
                     '<div class="twt-img" style="top: 1vh;"><img src="' + PictureUrl + '" class="tweeter-image"></div>' +
+                    '<div class="twitter-actions">' + 
+                        '<div class="tweet-reply"><i class="far fa-comment"></i></div>' + 
+                        '<div class="tweet-like"><i class="far fa-heart"></i></div>' +
+                    '</div>' +
                     '</div>';
                     $(".twitter-home-tab").append(TweetElement);
             } else {
-                let TweetElement = '<div class="twitter-tweet" data-twthandler="@'+TwitterHandle.replace(" ", "_")+'"><div class="tweet-reply"><i class="fas fa-reply"></i></div>'+
-                    '<div class="tweet-tweeter">'+Tweet.firstName+' '+Tweet.lastName+' &nbsp;<span>@'+TwitterHandle.replace(" ", "_")+' &middot; '+TimeAgo+'</span></div>'+
+                let TweetElement = '<div class="twitter-tweet" data-twthandler="@'+TwitterHandle.replace(" ", "_")+'">'+
+                    '<div class="tweet-tweeter"><b>'+Tweet.firstName+' '+Tweet.lastName+'</b> <span>@'+TwitterHandle.replace(" ", "_")+' &middot; '+TimeAgo+'</span></div>'+
                     '<div class="tweet-message">'+TwtMessage+'</div>'+
-                    '<img class="image" src= ' + Tweet.url + ' style = " border-radius:4px; width: 70%; position:relative; z-index: 1; left:52px; margin:.6rem .5rem .6rem 1rem;height: auto; padding-bottom: 15px;">' +
-                    '<div class="twt-img" style="top: 1vh;"><img src="'+PictureUrl+'" class="tweeter-image"></div>' +
+                    '<img class="image" src= ' + Tweet.url + '>' +
+                    '<div class="twt-img"><img src="'+PictureUrl+'" class="tweeter-image"></div>' +
+                    '<div class="twitter-actions">' + 
+                    '<div class="tweet-reply"><i class="far fa-comment"></i></div>' + 
+                    '<div class="tweet-like"><i class="far fa-heart"></i></div>' +
+                    '</div>' +
                     '</div>';
                 $(".twitter-home-tab").append(TweetElement);
             }
@@ -149,7 +159,7 @@ QB.Phone.Notifications.LoadMentionedTweets = function(Tweets) {
             });
             if (clean == '') clean = 'Hmm, I shouldn\'t be able to do this...'
             var TwtMessage = QB.Phone.Functions.FormatTwitterMessage(clean);
-            var TimeAgo = moment(Tweet.date).format('MM/DD/YYYY hh:mm');
+            var TimeAgo = moment(Tweet.date).format('DD/MM/YYYY hh:mm');
 
             var TwitterHandle = Tweet.firstName + ' ' + Tweet.lastName
             var PictureUrl = "./img/default.png";
@@ -255,10 +265,10 @@ $(document).on('click', '.hashtag-tag-text', function(e){
     e.preventDefault();
     if (!HashtagOpen) {
         var Hashtag = $(this).data('hashtag');
-        var PreviousTwitterTabObject = $('.twitter-header').find('[data-twittertab="'+CurrentTwitterTab+'"]');
+        var PreviousTwitterTabObject = $('.twitter-footer').find('[data-twittertab="'+CurrentTwitterTab+'"]');
 
-        $("#twitter-hashtags").addClass('selected-twitter-header-tab');
-        $(PreviousTwitterTabObject).removeClass('selected-twitter-header-tab');
+        $("#twitter-hashtags").addClass('selected-twitter-footer-tab');
+        $(PreviousTwitterTabObject).removeClass('selected-twitter-footer-tab');
 
         $("."+CurrentTwitterTab+"-tab").css({"display":"none"});
         $(".twitter-hashtags-tab").css({"display":"block"});
@@ -319,7 +329,7 @@ QB.Phone.Notifications.LoadHashtagMessages = function(Tweets) {
             });
             if (clean == '') clean = 'Hmm, I shouldn\'t be able to do this...'
             var TwtMessage = QB.Phone.Functions.FormatTwitterMessage(clean);
-            var TimeAgo = moment(Tweet.date).format('MM/DD/YYYY hh:mm');
+            var TimeAgo = moment(Tweet.date).format('DD/MM/YYYY hh:mm');
 
             var TwitterHandle = Tweet.firstName + ' ' + Tweet.lastName
             var PictureUrl = "./img/default.png"
