@@ -1704,4 +1704,319 @@ Config.DoorList = {
         doorRate = 5.0,
 		doorType = 'garage'
     },
+	-- Vanilla
+	-- Porta Principal
+	{
+        objHash = -1116041313,
+        objCoords  = vector3(127.95, -1298.51, 29.42),
+        textCoords = vector3(127.95, -1298.51, 29.42),
+        authorizedGangs = { 'vanilla' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 5.0,
+    },
+	-- Porta Traseira
+	{
+        objHash = 1695461688,
+        objCoords  = vector3(96.09, -1284.85, 29.44),
+        textCoords = vector3(96.09, -1284.85, 29.44),
+        authorizedGangs = { 'vanilla' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 5.0,
+    },
+	-- Area VIP
+	{
+        objHash = 390840000,
+        objCoords  = vector3(116.23, -1294.59, 29.44),
+        textCoords = vector3(116.23, -1294.59, 29.44),
+        authorizedGangs = { 'vanilla' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 5.0,
+    },
+	-- Bahamas
+	-- Portas Principais
+	{
+		textCoords = vector3(-1389.23, -587.96, 30.52),
+		authorizedGangs = { 'bahamas' },
+		locked = true,
+		pickable = false,
+		distance = 1.0,
+		doors = {
+			{
+				objHash = -1119680854,
+				objYaw = -90.0,
+				objCoords = vector3(-1389.23, -587.96, 30.52)
+			},
+
+			{
+				objHash = -1119680854,
+				objYaw = -90.0,
+				objCoords = vector3(-1387.07, -586.55, 30.52)
+			}
+		}
+	},
+	-- Recepcao
+	{
+		textCoords = vector3(-1389.23, -587.96, 30.52),
+		authorizedGangs = { 'bahamas' },
+		locked = true,
+		pickable = false,
+		distance = 1.0,
+		doors = {
+			{
+				objHash = -1747430008,
+				objYaw = -90.0,
+				objCoords = vector3(-1377.42, -596.88, 30.87)
+			},
+
+			{
+				objHash = -1747430008,
+				objYaw = -90.0,
+				objCoords = vector3(-1379.36, -596.42, 30.87)
+			}
+		}
+	},
+	-- Estritorios 
+	{
+        objHash = 401003935,
+        objCoords  = vector3(-1371.2, -607.16, 30.86),
+        textCoords = vector3(-1371.2, -607.16, 30.86),
+        authorizedGangs = { 'bahamas' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 5.0,
+    },
+	-- Garagem 
+	{
+        objHash = 401003935,
+        objCoords  = vector3(-1393.31, -624.95, 30.47),
+        textCoords = vector3(-1393.31, -624.95, 30.47),
+        authorizedGangs = { 'bahamas' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 5.0,
+    },
+	-- Garagem 2
+	{
+        objHash = -2003105485,
+        objCoords  = vector3(-1391.64, -640.34, 28.88),
+        textCoords = vector3(-1391.64, -640.34, 28.88),
+        authorizedGangs = { 'bahamas' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 5.0,
+    },
+	-- Porta Garagem
+	{
+        objHash = -822900180,
+        objCoords  = vector3(-1394.17, -635.76, 29.62),
+        textCoords = vector3(-1394.17, -635.76, 29.62),
+        authorizedGangs = { 'bahamas' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 0.5,
+		doorType = 'garage'
+    },
+	-- Cockatoos
+	-- Portas Principais
+	{
+		textCoords = vector3(-431.58, -22.81, 46.39),
+		authorizedGangs = { 'cockatoos' },
+		locked = true,
+		pickable = false,
+		distance = 1.0,
+		doors = {
+			{
+				objHash = -1119680854,
+				objYaw = -90.0,
+				objCoords = vector3(-431.58, -22.81, 46.39)
+			},
+
+			{
+				objHash = -1119680854,
+				objYaw = -90.0,
+				objCoords = vector3(-431.71, -25.4, 46.39)
+			}
+		}
+	},
+	-- Escritorio 
+	{
+        objHash = 634417522,
+        objCoords  = vector3(-444.36, -29.67, 41.02),
+        textCoords = vector3(-444.36, -29.67, 41.02),
+        authorizedGangs = { 'cockatoos' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 5.0,
+    },
+	-- Italiana
+	-- Porta Principal 
+	{
+        objHash = 1033441082,
+        objCoords  = vector3(-1535.98, 130.47, 57.75),
+        textCoords = vector3(-1535.98, 130.47, 57.75),
+        authorizedGangs = { 'italiana' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 5.0,
+    },
+	{
+        objHash = -1563640173,
+        objCoords  = vector3(-1523.06, 143.65, 55.81),
+        textCoords = vector3(-1523.06, 143.65, 55.81),
+        authorizedGangs = { 'italiana' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 5.0,
+    },
+	-- Porta Entrada
+	{
+        objHash = -1563640173,
+        objCoords  = vector3(-1500.4, 104.14, 55.81),
+        textCoords = vector3(-1500.4, 104.14, 55.81),
+        authorizedGangs = { 'italiana' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 5.0,
+    },
+	-- SOA
+	-- Portao
+	{
+        objHash = -930593859,
+        objCoords  = vector3(956.45, -137.84, 73.57),
+        textCoords = vector3(956.45, -137.84, 73.57),
+        authorizedGangs = { 'soa' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 5.0,
+		doorType = 'sliding'
+    },
+	-- Porta Garagem
+	{
+        objHash = -197537718,
+        objCoords  = vector3(982.38, -125.37, 75.04),
+        textCoords = vector3(982.38, -125.37, 75.04),
+        authorizedGangs = { 'soa' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 0.5,
+		doorType = 'garage'
+    },
+	-- Porta Garagem 2
+	{
+        objHash = -822900180,
+        objCoords  = vector3(963.17, -117.33, 75.29),
+        textCoords = vector3(963.17, -117.33, 75.29),
+        authorizedGangs = { 'soa' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 0.5,
+		doorType = 'garage'
+    },
+	-- Porta Garagem 3
+	{
+        objHash = -822900180,
+        objCoords  = vector3(968.76, -112.11, 75.29),
+        textCoords = vector3(968.76, -112.11, 75.29),
+        authorizedGangs = { 'soa' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 0.5,
+		doorType = 'garage'
+    },
+	-- Porta Garagem 4
+	{
+        objHash = 1335311341,
+        objCoords  = vector3(959.38, -120.45, 75.16),
+        textCoords = vector3(959.38, -120.45, 75.16),
+        authorizedGangs = { 'soa' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 0.5,
+		doorType = 'garage'
+    },
+	-- Porta Bar
+	{
+        objHash = 190770132,
+        objCoords  = vector3(981.15, -103.26, 74.99),
+        textCoords = vector3(981.15, -103.26, 74.99),
+        authorizedGangs = { 'soa' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 0.5
+    },
+	-- RedRoses
+	-- Garagem
+	{
+        objHash = 497665568,
+        objCoords  = vector3(2521.06, 4123.84, 39.22),
+        textCoords = vector3(2521.06, 4123.84, 39.22),
+        authorizedGangs = { 'red' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 0.5,
+		doorType = 'garage'
+    },
+	-- Porta Entrada
+	{
+        objHash = 782767342,
+        objCoords  = vector3(2507.76, 4097.62, 38.85),
+        textCoords = vector3(2507.76, 4097.62, 38.85),
+        authorizedGangs = { 'red' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 0.5
+    },
+	-- Porta Inferior
+	{
+        objHash = -626684119,
+        objCoords  = vector3(2512.06, 4105.02, 38.73),
+        textCoords = vector3(2512.06, 4105.02, 38.73),
+        authorizedGangs = { 'red' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 0.5
+    },
 }
