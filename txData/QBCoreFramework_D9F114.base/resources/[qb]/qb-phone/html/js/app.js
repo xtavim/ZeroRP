@@ -66,16 +66,16 @@ QB.Phone.Functions.SetupApplications = function(data) {
 
         if ((!app.job || app.job === QB.Phone.Data.PlayerJob.name) && !blockedapp) {
             var icon = '<img src="./img/apps/'+app.img+'" class="ApplicationIcon" >';
-            if (app.app == "meos") {
+            /* if (app.app == "meos") {
                 icon = '<img src="./img/politie.png" class="police-icon">';
-            }
+            } */
             $(applicationSlot).html(icon+'<div class="app-unread-alerts">0</div>');
             $(applicationSlot).prop('title', app.tooltipText);
             $(applicationSlot).data('app', app.app);
 
             if (app.tooltipPos !== undefined) {
                 $(applicationSlot).data('placement', app.tooltipPos)
-            }
+            } 
         }
     });
 
@@ -202,9 +202,9 @@ $(document).on('click', '.phone-application', function(e){
                             });
                         }
                     });
-                } else if (PressedApplication == "meos") {
+                } /* else if (PressedApplication == "meos") {
                     SetupMeosHome();
-                } else if (PressedApplication == "lawyers") {
+                } */ else if (PressedApplication == "lawyers") {
                     $.post('https://qb-phone/GetCurrentLawyers', JSON.stringify({}), function(data){
                         SetupLawyers(data);
                     });
@@ -236,7 +236,7 @@ $(document).on('click', '.phone-application', function(e){
         if (PressedApplication != null){
             QB.Phone.Notifications.Add("fas fa-exclamation-circle", "System", QB.Phone.Data.Applications[PressedApplication].tooltipText+" is not available!")
         }
-    }
+    } 
 });
 
 $(document).on('click', '.mykeys-key', function(e){
@@ -297,13 +297,13 @@ $(document).on('click', '.phone-home-container', function(event){
                     CurrentTab = "accounts";
                 }, 400)
             }
-        } else if (QB.Phone.Data.currentApplication == "meos") {
+        } /* else if (QB.Phone.Data.currentApplication == "meos") {
             $(".meos-alert-new").remove();
             setTimeout(function(){
                 $(".meos-recent-alert").removeClass("noodknop");
                 $(".meos-recent-alert").css({"background-color":"#004682"});
             }, 400)
-        }
+        } */
 
         QB.Phone.Data.currentApplication = null;
     }
@@ -345,11 +345,11 @@ QB.Phone.Functions.Close = function() {
             OpenedChatPicture = null;
             QB.Phone.Data.currentApplication = null;
         }, 500)
-    } else if (QB.Phone.Data.currentApplication == "meos") {
+    } /* else if (QB.Phone.Data.currentApplication == "meos") {
         $(".meos-alert-new").remove();
         $(".meos-recent-alert").removeClass("noodknop");
         $(".meos-recent-alert").css({"background-color":"#004682"});
-    }
+    } */
 
     QB.Phone.Animations.BottomSlideDown('.container', 300, -70);
     $.post('https://qb-phone/Close');
