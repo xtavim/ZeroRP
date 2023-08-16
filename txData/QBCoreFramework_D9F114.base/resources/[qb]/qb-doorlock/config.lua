@@ -1648,4 +1648,60 @@ Config.DoorList = {
 			}
 		}
 	},
+	-- Crips
+	-- Portas Principais
+	{
+		textCoords = vector3(1438.46, -1491.84, 63.8),
+		authorizedGangs = { 'crips' },
+		locked = true,
+		pickable = false,
+		distance = 1.0,
+		doors = {
+			{
+				objHash = -1085470028,
+				objYaw = -90.0,
+				objCoords = vector3(1438.46, -1491.84, 63.8)
+			},
+
+			{
+				objHash = 406830232,
+				objYaw = -90.0,
+				objCoords = vector3(1436.71, -1491.24, 63.8)
+			}
+		}
+	},
+	-- Portas Traseiras
+	{
+		textCoords = vector3(1447.47, -1482.99, 63.8),
+		authorizedGangs = { 'crips' },
+		locked = true,
+		pickable = false,
+		distance = 1.0,
+		doors = {
+			{
+				objHash = 406830232,
+				objYaw = -90.0,
+				objCoords = vector3(1447.47, -1482.99, 63.8)
+			},
+
+			{
+				objHash = -1085470028,
+				objYaw = -90.0,
+				objCoords = vector3(1445.72, -1482.39, 63.8)
+			}
+		}
+	},
+	-- Porta Traseiras 2
+	{
+        objHash = 558744515,
+        objCoords  = vector3(1440.43, -1480.84, 63.8),
+        textCoords = vector3(1440.43, -1480.84, 63.8),
+        authorizedGangs = { 'crips' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 5.0,
+		doorType = 'garage'
+    },
 }

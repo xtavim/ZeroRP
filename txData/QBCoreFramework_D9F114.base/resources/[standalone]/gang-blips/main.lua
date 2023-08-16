@@ -40,8 +40,16 @@ Config = {
             alpha = 128,
             rotation = 49
         },
-        
-        
+        {
+            gang = 'crips',
+            type = "square",
+            coords = vec3(1380.87, -1536.63, 56.63),
+            height = 90.0,
+            width = 150.0,
+            color = 3,
+            alpha = 128,
+            rotation = 35
+        },              
     }
 }
 

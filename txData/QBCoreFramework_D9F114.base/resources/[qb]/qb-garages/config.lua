@@ -291,6 +291,34 @@ Config.Garages = {
         ["job"] = "blood",
         ["jobType"] = "bloods"
     },
+    ["crips"] = {
+        ["label"] = "Crips",
+        ["takeVehicle"] = vector3(-811.65, 187.49, 72.48),
+        ["spawnPoint"] = vector4(-818.43, 184.97, 72.28, 107.85),
+        ["putVehicle"] = vector3(-811.65, 187.49, 72.48),
+        ["showBlip"] = false,
+        ["blipName"] = "Crips",
+        ["blipNumber"] = 357,
+        ["blipColor"] = 3,
+        ["type"] = "gang",                --public, job, gang, depot
+        ["vehicle"] = "car",              --car, air, sea, rig
+        ["job"] = "crips",
+        ["jobType"] = "crips"
+    },
+    ["vagos"] = {
+        ["label"] = "Vagos",
+        ["takeVehicle"] = vector3(-811.65, 187.49, 72.48),
+        ["spawnPoint"] = vector4(-818.43, 184.97, 72.28, 107.85),
+        ["putVehicle"] = vector3(-811.65, 187.49, 72.48),
+        ["showBlip"] = false,
+        ["blipName"] = "Vagos",
+        ["blipNumber"] = 357,
+        ["blipColor"] = 3,
+        ["type"] = "gang",                --public, job, gang, depot
+        ["vehicle"] = "car",              --car, air, sea, rig
+        ["job"] = "vagos",
+        ["jobType"] = "vagos"
+    },
     ["police"] = {
         ["label"] = "Police",
         ["takeVehicle"] = vector3(454.6, -1017.4, 28.4),
