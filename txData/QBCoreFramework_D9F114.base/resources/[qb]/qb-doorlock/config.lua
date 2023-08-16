@@ -1379,4 +1379,67 @@ Config.DoorList = {
 		doorRate = 5.0,
 		doorType = 'sliding'
 	},
+	-- Russa
+	-- Porta Rua
+	{
+		objHash = -1249591818,
+		objCoords  = vector3(-2652.75, 1327.77, 147.61),
+		textCoords = vector3(-2652.75, 1327.77, 147.61),
+		authorizedGangs = { 'russa' },
+		objYaw = 0,
+		locked = true,
+		pickable = false,
+		distance = 2.0,
+		doorRate = 5.0,
+	},
+	-- Porta Casa
+	{
+		objHash = 1901183774,
+		objCoords  = vector3(-2667.6, 1326.96, 147.59),
+		textCoords = vector3(-2667.6, 1326.96, 147.59),
+		authorizedGangs = { 'russa' },
+		objYaw = 0,
+		locked = true,
+		pickable = false,
+		distance = 2.0,
+		doorRate = 5.0,
+	},
+	-- Porta Secreta
+	{
+		objHash = -147325430,
+		objCoords  = vector3(-2667.27, 1330.39, 147.45),
+		textCoords = vector3(-2667.27, 1330.39, 147.45),
+		authorizedGangs = { 'russa' },
+		objYaw = 0,
+		locked = true,
+		pickable = false,
+		distance = 2.0,
+		doorRate = 5.0,
+	},
+	-- Porta Garagem
+	{
+		objHash = -1573772550,
+		objCoords  = vector3(-2652.43, 1307.37, 147.72),
+		textCoords = vector3(-2652.43, 1307.37, 147.72),
+		authorizedGangs = { 'russa' },
+		objYaw = 0,
+		locked = true,
+		pickable = false,
+		distance = 2.0,
+		doorRate = 0.5,
+		doorType = 'garage'
+	},
+	-- Porta Varanda
+	{
+		objHash = -1821777087,
+		objCoords  = vector3(-2666.64, 1335.48, 152.23),
+		textCoords = vector3(-2666.64, 1335.48, 152.23),
+		authorizedGangs = { 'russa' },
+		objYaw = 0,
+		locked = true,
+		pickable = false,
+		distance = 2.0,
+		doorRate = 0.5,
+		doorType = 'garage'
+	},
 }
