@@ -133,5 +133,41 @@ QBShared.Gangs = {
 				isboss = true
             },
         },
-	}
+	},
+    ['cockatoos'] = {
+		label = 'Cockatoos',
+		grades = {
+            ['0'] = {
+                name = 'Recruta'
+            },
+			['1'] = {
+                name = 'Membro'
+            },
+			['2'] = {
+                name = 'Braço Direito'
+            },
+			['3'] = {
+                name = 'Chefe',
+				isboss = true
+            },
+        },
+	},
+    ['red'] = {
+		label = 'Red Roses',
+		grades = {
+            ['0'] = {
+                name = 'Recruta'
+            },
+			['1'] = {
+                name = 'Membro'
+            },
+			['2'] = {
+                name = 'Braço Direito'
+            },
+			['3'] = {
+                name = 'Chefe',
+				isboss = true
+            },
+        },
+	},
 }

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfoVariation>
+  <variationData>
+    <Item>
+      <modelName>f8spider</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array">
+            27
+            27
+            1
+            156
+            27
+            27
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array">
+            27
+            89
+            1
+            156
+            27
+            27
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array">
+            8
+            27
+            1
+            156
+            27
+            27
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array">
+            89
+            27
+            1
+            156
+            27
+            27
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array">
+            89
+            89
+            1
+            156
+            27
+            27
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array">
+            11
+            27
+            1
+            156
+            27
+            27
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array">
+            11
+            89
+            1
+            156
+            89
+            89
+          </indices>
+        </Item>
+        <Item>
+          <indices content="char_array">
+            63
+            89
+            1
+            156
+            89
+            89
+          </indices>
+        </Item>
+        
+      </colors>
+      <kits>
+        <Item>69123_f8spider_modkit</Item>
+      </kits>
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Blue Plate</Name>
+            <Value value="50" />
+          </Item>
+          <Item>
+            <Name>Yellow Plate</Name>
+            <Value value="50" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="113" />
+      <sirenSettings value="0" />
+    </Item>
+  </variationData>
+</CVehicleModelInfoVariation>
