@@ -60,6 +60,12 @@ Config.GangMenus = {
     ['families'] = {
         vector3(0, 0, 0),
     },
+    ['red'] = {
+        vector3(0, 0, 0),
+    },
+    ['soa'] = {
+        vector3(0, 0, 0),
+    },
     ['bloods'] = {
         vector3(0, 0, 0),
     },
@@ -67,6 +73,15 @@ Config.GangMenus = {
         vector3(0, 0, 0),
     },
     ['russa'] = {
+        vector3(0, 0, 0),
+    },
+    ['itliana'] = {
+        vector3(0, 0, 0),
+    },
+    ['vanilla'] = {
+        vector3(0, 0, 0),
+    },
+    ['bahamas'] = {
         vector3(0, 0, 0),
     },
 }

@@ -98,6 +98,60 @@ QBShared.Gangs = {
             },
         },
 	},
+    ['red'] = {
+		label = 'RedRoses',
+		grades = {
+            ['0'] = {
+                name = 'Recruta'
+            },
+			['1'] = {
+                name = 'Membro'
+            },
+			['2'] = {
+                name = 'Braço Direito'
+            },
+			['3'] = {
+                name = 'Chefe',
+				isboss = true
+            },
+        },
+	},
+    ['soa'] = {
+		label = 'Sons of Anarchy',
+		grades = {
+            ['0'] = {
+                name = 'Recruta'
+            },
+			['1'] = {
+                name = 'Membro'
+            },
+			['2'] = {
+                name = 'Braço Direito'
+            },
+			['3'] = {
+                name = 'Chefe',
+				isboss = true
+            },
+        },
+	},
+    ['italiana'] = {
+		label = 'Italiana',
+		grades = {
+            ['0'] = {
+                name = 'Recruta'
+            },
+			['1'] = {
+                name = 'Membro'
+            },
+			['2'] = {
+                name = 'Braço Direito'
+            },
+			['3'] = {
+                name = 'Chefe',
+				isboss = true
+            },
+        },
+	},
 	['bloods'] = {
 		label = 'Bloods',
 		grades = {
@@ -172,6 +226,42 @@ QBShared.Gangs = {
 	},
     ['red'] = {
 		label = 'Red Roses',
+		grades = {
+            ['0'] = {
+                name = 'Recruta'
+            },
+			['1'] = {
+                name = 'Membro'
+            },
+			['2'] = {
+                name = 'Braço Direito'
+            },
+			['3'] = {
+                name = 'Chefe',
+				isboss = true
+            },
+        },
+	},
+    ['vanilla'] = {
+		label = 'Vanilla',
+		grades = {
+            ['0'] = {
+                name = 'Recruta'
+            },
+			['1'] = {
+                name = 'Membro'
+            },
+			['2'] = {
+                name = 'Braço Direito'
+            },
+			['3'] = {
+                name = 'Chefe',
+				isboss = true
+            },
+        },
+	},
+    ['bahamas'] = {
+		label = 'Bahamas',
 		grades = {
             ['0'] = {
                 name = 'Recruta'
