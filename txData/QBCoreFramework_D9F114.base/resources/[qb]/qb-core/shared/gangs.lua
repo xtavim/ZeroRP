@@ -116,6 +116,24 @@ QBShared.Gangs = {
             },
         },
 	},
+    ['crips'] = {
+		label = 'crips',
+		grades = {
+            ['0'] = {
+                name = 'Recruta'
+            },
+			['1'] = {
+                name = 'Membro'
+            },
+			['2'] = {
+                name = 'Braço Direito'
+            },
+			['3'] = {
+                name = 'Chefe',
+				isboss = true
+            },
+        },
+	},
 	['russa'] = {
 		label = 'Russa',
 		grades = {
