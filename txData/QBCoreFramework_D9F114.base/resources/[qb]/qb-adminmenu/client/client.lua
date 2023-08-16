@@ -24,6 +24,7 @@ local menu12 = MenuV:CreateMenu(false, Lang:t("menu.vehicle_categories"), menuLo
 local menu13 = MenuV:CreateMenu(false, Lang:t("menu.vehicle_models"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test13')
 local menu14 = MenuV:CreateMenu(false, Lang:t("menu.entity_view_options"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test14')
 local menu15 = MenuV:CreateMenu(false, Lang:t("menu.spawn_weapons"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test15')
+local menu16 = MenuV:CreateMenu(false, Lang:t("menu.change_skin"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test16')
 
 RegisterNetEvent('qb-admin:client:openMenu', function()
     MenuV:OpenMenu(menu1)
@@ -133,6 +134,14 @@ menu2:AddButton({
     label = Lang:t("menu.spawn_weapons"),
     value = menu15,
     description = Lang:t("desc.spawn_weapons_desc")
+})
+
+--skin
+menu2:AddButton({
+    icon = '👹',
+    label = Lang:t("menu.change_skin"),
+    value = menu16,
+    description = Lang:t("desc.change_skin_desc")
 })
 
 -- Server Options Menu Buttons
@@ -374,6 +383,27 @@ local function LocalInputInt(text, number, windows)
     end
 end
 
+local function ChangeSkin (v) 
+    if IsModelInCdimage(v) and IsModelValid(v) then
+        local model = GetHashKey(v)
+
+        RequestModel(model)
+
+        while not HasModelLoaded(model) do
+            RequestModel(model)
+            Wait(0)
+        end
+
+        TriggerServerEvent('qb-admin:changeSkin')
+
+        SetPlayerModel(PlayerId(), model)
+
+        SetModelAsNoLongerNeeded(model)
+
+        QBCore.Functions.Notify(Lang:t("success.change_skin"))
+    end
+end 
+
 --[[
     Admin Options functions
 --]]
@@ -436,6 +466,39 @@ for _,v in pairs(QBCore.Shared.Weapons) do
     })
 end
 
+-- Skin list
+for _,v in pairs(QBCore.Shared.ManPlayerModels) do
+    menu16:AddButton({icon = '👹',
+        label = v ,
+        value = v ,
+        description = Lang:t("desc.change_skin_desc"),
+        select = function(_)
+            ChangeSkin(v)
+        end
+    })
+end
+
+for _,v in pairs(QBCore.Shared.WomanPlayerModels) do
+    menu16:AddButton({icon = '👹',
+        label = v ,
+        value = v ,
+        description = Lang:t("desc.change_skin_desc"),
+        select = function(_)
+            ChangeSkin(v)
+        end
+    })
+end
+
+for _,v in pairs(QBCore.Shared.Skins) do
+    menu16:AddButton({icon = '👹',
+        label = v ,
+        value = v ,
+        description = Lang:t("desc.change_skin_desc"),
+        select = function(_)
+            ChangeSkin(v)
+        end
+    })
+end
 
 --[[
     Player Management Options functions

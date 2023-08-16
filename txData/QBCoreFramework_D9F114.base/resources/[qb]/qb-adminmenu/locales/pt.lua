@@ -8,6 +8,7 @@ local Translations = {
         ["no_store_vehicle_garage"] = "Não pode guardar este veículo em sua garagem..",
         ["no_vehicle"] = "No está em um veículo..",
         ["no_weapon"] = "Ñão tem uma arma em suas mãos..",
+        ["no_skin"] = "Skin não existe",
         ["no_free_seats"] = "O veículo não tem assentos livres!",
         ["failed_vehicle_owner"] = "Este veículo já é seu..",
         ["not_online"] = "Este jogador não está online",
@@ -30,6 +31,7 @@ local Translations = {
         ["spawn_weapon"] = "Gerou uma arma",
         ["noclip_enabled"] = "No-clip ativado",
         ["noclip_disabled"] = "No-clip desativado",
+        ["change_skin"] = "Mudou de Skin!",
     },
     info = {
         ["ped_coords"] = "Coordenadas Ped:",
@@ -155,6 +157,7 @@ local Translations = {
         ["entity_view_objects"] = "Exibir Objetos",
         ["entity_view_freeaim_copy"] = "Copiar Informações da Entidade em Mira Livre",
         ["spawn_weapons"] = "Criar armas",
+        ["change_skin"] = "Mudar Skin",
         ["max_mods"] = "Mods máximos do carro",
     },
     desc = {
@@ -198,6 +201,7 @@ local Translations = {
         ["entity_view_objects_desc"] = "Ativar/desativar informações do objeto no mundo",
         ["entity_view_freeaim_copy_desc"] = "Copia as informações da entidade em mira livre para a área de transferência",
         ["spawn_weapons_desc"] = "Criar qualquer arma.",
+        ["change_skin_desc"] = "Mudar para qualquer skin.",
         ["max_mod_desc"] = "Mods máximos em seu veículo atual",
     },
     time = {

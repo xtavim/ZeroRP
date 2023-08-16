@@ -1,10 +1,10 @@
 QBShared = QBShared or {}
 QBShared.Gangs = {
 	['none'] = {
-		label = 'No Gang',
+		label = 'Sem Gangue',
 		grades = {
             ['0'] = {
-                name = 'Unaffiliated'
+                name = 'Não afiliado'
             },
         },
 	},
@@ -12,16 +12,16 @@ QBShared.Gangs = {
 		label = 'The Lost MC',
 		grades = {
             ['0'] = {
-                name = 'Recruit'
+                name = 'Recruta'
             },
 			['1'] = {
-                name = 'Enforcer'
+                name = 'Membro'
             },
 			['2'] = {
-                name = 'Shot Caller'
+                name = 'Braço Direito'
             },
 			['3'] = {
-                name = 'Boss',
+                name = 'Chefe',
 				isboss = true
             },
         },
@@ -30,16 +30,16 @@ QBShared.Gangs = {
 		label = 'Ballas',
 		grades = {
             ['0'] = {
-                name = 'Recruit'
+                name = 'Recruta'
             },
 			['1'] = {
-                name = 'Enforcer'
+                name = 'Membro'
             },
 			['2'] = {
-                name = 'Shot Caller'
+                name = 'Braço Direito'
             },
 			['3'] = {
-                name = 'Boss',
+                name = 'Chefe',
 				isboss = true
             },
         },
@@ -48,16 +48,16 @@ QBShared.Gangs = {
 		label = 'Vagos',
 		grades = {
             ['0'] = {
-                name = 'Recruit'
+                name = 'Recruta'
             },
 			['1'] = {
-                name = 'Enforcer'
+                name = 'Membro'
             },
 			['2'] = {
-                name = 'Shot Caller'
+                name = 'Braço Direito'
             },
 			['3'] = {
-                name = 'Boss',
+                name = 'Chefe',
 				isboss = true
             },
         },
@@ -66,16 +66,16 @@ QBShared.Gangs = {
 		label = 'Cartel',
 		grades = {
             ['0'] = {
-                name = 'Recruit'
+                name = 'Recruta'
             },
 			['1'] = {
-                name = 'Enforcer'
+                name = 'Membro'
             },
 			['2'] = {
-                name = 'Shot Caller'
+                name = 'Braço Direito'
             },
 			['3'] = {
-                name = 'Boss',
+                name = 'Chefe',
 				isboss = true
             },
         },
@@ -84,16 +84,16 @@ QBShared.Gangs = {
 		label = 'Families',
 		grades = {
             ['0'] = {
-                name = 'Recruit'
+                name = 'Recruta'
             },
 			['1'] = {
-                name = 'Enforcer'
+                name = 'Membro'
             },
 			['2'] = {
-                name = 'Shot Caller'
+                name = 'Braço Direito'
             },
 			['3'] = {
-                name = 'Boss',
+                name = 'Chefe',
 				isboss = true
             },
         },
@@ -102,16 +102,16 @@ QBShared.Gangs = {
 		label = 'Bloods',
 		grades = {
             ['0'] = {
-                name = 'Recruit'
+                name = 'Recruta'
             },
 			['1'] = {
-                name = 'Enforcer'
+                name = 'Membro'
             },
 			['2'] = {
-                name = 'Shot Caller'
+                name = 'Braço Direito'
             },
 			['3'] = {
-                name = 'Boss',
+                name = 'Chefe',
 				isboss = true
             },
         },
@@ -120,16 +120,16 @@ QBShared.Gangs = {
 		label = 'Russa',
 		grades = {
             ['0'] = {
-                name = 'Recruit'
+                name = 'Recruta'
             },
 			['1'] = {
-                name = 'Enforcer'
+                name = 'Membro'
             },
 			['2'] = {
-                name = 'Shot Caller'
+                name = 'Braço Direito'
             },
 			['3'] = {
-                name = 'Boss',
+                name = 'Chefe',
 				isboss = true
             },
         },

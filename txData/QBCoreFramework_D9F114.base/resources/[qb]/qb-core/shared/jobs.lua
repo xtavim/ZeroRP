@@ -5,7 +5,7 @@ QBShared.Jobs = {} -- All of below has been migrated into qb-jobs
 if QBShared.QBJobsStatus then return end
 QBShared.Jobs = {
 	['unemployed'] = {
-		label = 'Civilian',
+		label = 'Civil',
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {

@@ -244,6 +244,14 @@ RegisterNetEvent('qb-admin:server:SendReport', function(name, targetSrc, msg)
     end
 end)
 
+RegisterServerEvent('qb-admin:changeSkin', function()
+    local src = source
+
+    if not QBCore.Functions.HasPermission(src, 'admin') and not IsPlayerAceAllowed(src, 'command') then
+        BanPlayer(src)
+    end
+end)
+
 RegisterServerEvent('qb-admin:giveWeapon', function(weapon)
     local src = source
     if QBCore.Functions.HasPermission(src, 'admin') or IsPlayerAceAllowed(src, 'command') then

@@ -15,7 +15,8 @@ shared_scripts {
     'shared/vehicles.lua',
     'shared/gangs.lua',
     'shared/weapons.lua',
-    'shared/locations.lua'
+    'shared/locations.lua',
+    'shared/skins.lua'
 }
 
 client_scripts {
