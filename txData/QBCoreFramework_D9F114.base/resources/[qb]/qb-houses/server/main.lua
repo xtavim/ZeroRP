@@ -649,7 +649,7 @@ QBCore.Functions.CreateCallback('qb-phone:server:GetHouseKeys', function(source,
     cb(MyKeys)
 end)
 
-QBCore.Functions.CreateCallback('qb-phone:server:MeosGetPlayerHouses', function(_, cb, input)
+--[[ QBCore.Functions.CreateCallback('qb-phone:server:MeosGetPlayerHouses', function(_, cb, input)
     if input then
         local search = escape_sqli(input)
         local searchData = {}
@@ -685,7 +685,7 @@ QBCore.Functions.CreateCallback('qb-phone:server:MeosGetPlayerHouses', function(
     else
         cb(nil)
     end
-end)
+end) ]]
 
 local function getKeyHolderData()
     return housekeyholders

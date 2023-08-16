@@ -1,4 +1,4 @@
-var CurrentMeosPage = null;
+/* var CurrentMeosPage = null;
 var OpenedPerson = null;
 
 $(document).on('click', '.meos-block', function(e){
@@ -335,3 +335,4 @@ $(document).on('click', '.meos-clear-alerts', function(e){
     $(".meos-recent-alerts").html('<div class="meos-recent-alert"> <span class="meos-recent-alert-title">You don\'t have any alerts!</span></div>');
     QB.Phone.Notifications.Add("politie", "MDT", "All alerts have been deleted!");
 });
+ */

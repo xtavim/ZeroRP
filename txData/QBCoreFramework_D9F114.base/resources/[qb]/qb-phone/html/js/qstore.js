@@ -93,9 +93,9 @@ $(document).on('click', '.download-password-accept', function(e){
                     if ((!Installed.data.job || Installed.data.job === QB.Phone.Data.PlayerJob.name) && !blockedapp) {
                         $(applicationSlot).css({"background-color":Installed.data.color});
                         var icon = '<i class="ApplicationIcon '+Installed.data.icon+'" style="'+Installed.data.style+'"></i>';
-                        if (Installed.data.app == "meos") {
+                        /* if (Installed.data.app == "meos") {
                             icon = '<img src="./img/politie.png" class="police-icon">';
-                        }
+                        } */
                         $(applicationSlot).html(icon+'<div class="app-unread-alerts">0</div>');
                         $(applicationSlot).prop('title', Installed.data.tooltipText);
                         $(applicationSlot).data('app', Installed.data.app);

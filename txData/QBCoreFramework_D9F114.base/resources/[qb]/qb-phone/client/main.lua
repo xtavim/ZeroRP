@@ -1118,11 +1118,11 @@ RegisterNUICallback('TransferCid', function(data, cb)
     end, TransferedCid, data.HouseData)
 end)
 
-RegisterNUICallback('FetchPlayerHouses', function(data, cb)
+--[[ RegisterNUICallback('FetchPlayerHouses', function(data, cb)
     QBCore.Functions.TriggerCallback('qb-phone:server:MeosGetPlayerHouses', function(result)
         cb(result)
     end, data.input)
-end)
+end) ]]
 
 RegisterNUICallback('SetGPSLocation', function(data, cb)
     SetNewWaypoint(data.coords.x, data.coords.y)

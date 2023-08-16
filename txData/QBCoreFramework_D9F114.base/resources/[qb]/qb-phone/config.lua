@@ -68,7 +68,7 @@ Config.PhoneApplications = {
     },
     ["advert"] = {
         app = "advert",
-        img = "icon-gallery.png",
+        img = "icon-advertisements.png",
         tooltipText = "Advertisements",
         job = false,
         blockedjobs = {},
@@ -111,15 +111,6 @@ Config.PhoneApplications = {
         slot = 11,
         Alerts = 0,
     },
-    ["meos"] = {
-        app = "meos",
-        img = "icon-gallery.png",
-        tooltipText = "MDT",
-        job = "police",
-        blockedjobs = {},
-        slot = 13,
-        Alerts = 0,
-    },
     ["lawyers"] = {
         app = "lawyers",
         img = "icon-gallery.png",
@@ -137,7 +128,7 @@ Config.PhoneApplications = {
         tooltipPos = "bottom",
         job = false,
         blockedjobs = {},
-        slot = 16,
+        slot = 13,
         Alerts = 0,
     },
     ["camera"] = {
@@ -147,7 +138,7 @@ Config.PhoneApplications = {
         tooltipPos = "bottom",
         job = false,
         blockedjobs = {},
-        slot = 15,
+        slot = 14,
         Alerts = 0,
     },
 }
