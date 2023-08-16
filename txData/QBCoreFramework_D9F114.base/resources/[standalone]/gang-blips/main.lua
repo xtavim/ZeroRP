@@ -30,6 +30,16 @@ Config = {
             alpha = 128,
             rotation = 49
         },
+        {
+            gang = 'vagos',
+            type = "square",
+            coords = vec3(335.78, -2047.01, 21.08),
+            height = 95.0,
+            width = 170.0,
+            color = 5,
+            alpha = 128,
+            rotation = 49
+        },
         
         
     }
