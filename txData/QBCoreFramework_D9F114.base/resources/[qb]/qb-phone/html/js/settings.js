@@ -1,9 +1,18 @@
 QB.Phone.Settings = {};
-QB.Phone.Settings.Background = "default-qbcore";
+QB.Phone.Settings.Background = "wallpaper-1.jpg";
 QB.Phone.Settings.OpenedTab = null;
 QB.Phone.Settings.Backgrounds = {
-    'default-qbcore': {
-        label: "Standard QBCore"
+    'wallpaper-1': {
+        label: "Fundo 1"
+    },
+    'wallpaper-2': {
+        label: "Fundo 2"
+    },
+    'wallpaper-3': {
+        label: "Fundo 3"
+    },
+    'wallpaper-4': {
+        label: "Fundo 4"
     }
 };
 
@@ -42,7 +51,7 @@ $(document).on('click', '#accept-background', function(e){
     if (hasCustomBackground === false) {
         QB.Phone.Notifications.Add("fas fa-paint-brush", "Settings", QB.Phone.Settings.Backgrounds[QB.Phone.Settings.Background].label+" is set!")
         QB.Phone.Animations.TopSlideUp(".settings-"+QB.Phone.Settings.OpenedTab+"-tab", 200, -100);
-        $(".phone-background").css({"background-image":"url('/html/img/backgrounds/"+QB.Phone.Settings.Background+".png')"})
+        $(".phone-background").css({"background-image":"url('./img/backgrounds/"+QB.Phone.Settings.Background+".png')"})
     } else {
         QB.Phone.Notifications.Add("fas fa-paint-brush", "Settings", "Personal background set!")
         QB.Phone.Animations.TopSlideUp(".settings-"+QB.Phone.Settings.OpenedTab+"-tab", 200, -100);
@@ -58,13 +67,13 @@ QB.Phone.Functions.LoadMetaData = function(MetaData) {
     if (MetaData.background !== null && MetaData.background !== undefined) {
         QB.Phone.Settings.Background = MetaData.background;
     } else {
-        QB.Phone.Settings.Background = "default-qbcore";
+        QB.Phone.Settings.Background = "./img/backgrounds/wallpaper-1.jpg";
     }
 
     var hasCustomBackground = QB.Phone.Functions.IsBackgroundCustom();
 
     if (!hasCustomBackground) {
-        $(".phone-background").css({"background-image":"url('/html/img/backgrounds/"+QB.Phone.Settings.Background+".png')"})
+        $(".phone-background").css({"background-image":"url('./img/backgrounds/"+QB.Phone.Settings.Background+"')"})
     } else {
         $(".phone-background").css({"background-image":"url('"+QB.Phone.Settings.Background+"')"});
     }

@@ -6,7 +6,8 @@ local Hashtags = {}
 local Calls = {}
 local Adverts = {}
 local GeneratedPlates = {}
-local WebHook = "https://discord.com/api/webhooks/1141324353808638083/NwIzOAKLVazzcMP2A_F3Mr7-3mmKB6DIShUD0HpHKNrhN3qbvhW23WaRzUsL8PUiXdvW"
+local ImgHostWebHook = "https://discord.com/api/webhooks/1141324353808638083/NwIzOAKLVazzcMP2A_F3Mr7-3mmKB6DIShUD0HpHKNrhN3qbvhW23WaRzUsL8PUiXdvW"
+local TwitterWebHook = "https://discord.com/api/webhooks/1141341725902774353/nwf6jIWwcHKneqjy1MKC_uBf9A48ozyMEIoTYJDDiIJ2dmC_E8X3_HZea9wI8MLUgRBx"
 local bannedCharacters = {'%','$',';'}
 local TWData = {}
 
@@ -39,6 +40,34 @@ local function round(num, numDecimalPlaces)
         return math.floor(num * mult + 0.5) / mult
     end
     return math.floor(num + 0.5)
+end
+
+local function sendToDiscordTwitter(TweetData)
+    -- Discord WebHook
+    local name = '@' .. TweetData.firstName .. ' ' .. TweetData.lastName
+    local embed = {
+        {
+            ['color']       = 2303786,
+            ['title']       = '🆕 - Novo Tweet!',
+            ['description'] = '📢 - O utilizador **' .. name .. '** publicou um novo Tweet.',
+            ['fields']      = {
+                {
+                    name    = '💬 - Descrição',
+                    value   = TweetData.message,
+                    inline  = false,
+                },
+            },
+            ['image'] = {
+                ['url']     = TweetData.url
+            },
+            ['timestamp']   = TweetData.date,
+            ['footer']      = {
+                ['text']    = 'ID: ' .. TweetData.citizenid,
+            },
+        }
+    }
+
+    PerformHttpRequest(TwitterWebHook, function(err, text, headers) end, 'POST', json.encode({username = 'Twitter', embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
 
 function QBPhone.AddMentionedTweet(citizenid, TweetData)
@@ -592,8 +621,8 @@ QBCore.Functions.CreateCallback('qb-phone:server:GetCurrentLawyers', function(_,
 end)
 
 QBCore.Functions.CreateCallback("qb-phone:server:GetWebhook",function(_,cb)
-	if WebHook ~= "" then
-		cb(WebHook)
+	if ImgHostWebHook ~= "" then
+		cb(ImgHostWebHook)
 	else
 		print('Set your webhook to ensure that your camera will work!!!!!! Set this on line 10 of the server sided script!!!!!')
 		cb(nil)
@@ -830,6 +859,8 @@ RegisterNetEvent('qb-phone:server:UpdateTweets', function(NewTweets, TweetData)
         })
         TriggerClientEvent('qb-phone:client:UpdateTweets', -1, src, NewTweets, TweetData, false)
     end
+
+    sendToDiscordTwitter(TweetData)
 end)
 
 RegisterNetEvent('qb-phone:server:TransferMoney', function(iban, amount)

@@ -65,8 +65,7 @@ QB.Phone.Functions.SetupApplications = function(data) {
         var blockedapp = IsAppJobBlocked(app.blockedjobs, QB.Phone.Data.PlayerJob.name)
 
         if ((!app.job || app.job === QB.Phone.Data.PlayerJob.name) && !blockedapp) {
-            $(applicationSlot).css({"background-color":app.color});
-            var icon = '<i class="ApplicationIcon '+app.icon+'" style="'+app.style+'"></i>';
+            var icon = '<img src="./img/apps/'+app.img+'" class="ApplicationIcon" >';
             if (app.app == "meos") {
                 icon = '<img src="./img/politie.png" class="police-icon">';
             }
@@ -478,7 +477,7 @@ QB.Phone.Functions.UpdateTime = function(data) {
     }
     var MessageTime = Hourssssss + ":" + Minutessss
 
-    $("#phone-time").html("<span>" + data.InGameTime.hour + ":" + data.InGameTime.minute + "</span>");
+    $("#phone-time").html("<b>" + data.InGameTime.hour + ":" + data.InGameTime.minute + "</b>");
 }
 
 var NotificationTimeout = null;

@@ -28,6 +28,8 @@ files {
     'html/img/*.png',
     'html/css/*.css',
     'html/img/backgrounds/*.png',
+    'html/img/backgrounds/*.jpg',
+    'html/img/backgrounds/*.jpeg',
     'html/img/apps/*.png',
 }
 
