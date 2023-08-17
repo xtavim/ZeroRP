@@ -48,7 +48,7 @@ local Translations = {
         ["o_bag"] = "Abrir bosla",
     },
     interaction = {
-        ["craft"] = "[E] - Elaborar",
+        ["craft"] = "E - Elaborar",
     },
     label = {
         ["craft"] = "Elaborar",

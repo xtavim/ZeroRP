@@ -1,7 +1,7 @@
 local Translations = {
     info = {
-        open_shop = "[E] Parduotuvė",
-        sell_chips = "[E] Parduoti žetonus"
+        open_shop = "E Parduotuvė",
+        sell_chips = "E Parduoti žetonus"
     },
     error = {
         dealer_decline = "Pardavėjas atsisako rodyti jums ginklus",

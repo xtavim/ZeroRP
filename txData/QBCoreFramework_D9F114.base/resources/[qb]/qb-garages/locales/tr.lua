@@ -46,10 +46,10 @@ local Translations = {
         impound = "Çekilmiş",
     },
     info = {
-        car_e = "[E] Garaj",
-        sea_e = "[E] Botgarajı",
-        air_e = "[E] Uçak garajı",
-        park_e = "[E] Mağaza Aracı",
+        car_e = "E Garaj",
+        sea_e = "E Botgarajı",
+        air_e = "E Uçak garajı",
+        park_e = "E Mağaza Aracı",
         house_garage = "Ev garajı",
     }
 }

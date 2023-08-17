@@ -9,11 +9,11 @@ local Translations = {
         ["process_grapes"] = "Üzüm İşleniyor ..",
     },
     task = {
-        ["start_task"] = "[E] Başla",
-        ["load_ingrediants"] = "[E] Malzemeleri Yükle",
-        ["wine_process"] = "[E] Şarap İşlemeye Başla",
-        ["get_wine"] = "[E] Şarap Al",
-        ["make_grape_juice"] = "[E] Üzüm Suyu Yap",
+        ["start_task"] = "E Başla",
+        ["load_ingrediants"] = "E Malzemeleri Yükle",
+        ["wine_process"] = "E Şarap İşlemeye Başla",
+        ["get_wine"] = "E Şarap Al",
+        ["make_grape_juice"] = "E Üzüm Suyu Yap",
         ["countdown"] = "Kalan süre %{time}s",
         ['cancel_task'] = "Görevi iptal ettiniz"
     },

@@ -9,11 +9,11 @@ local Translations = {
         ["process_grapes"] = "Processing Grapes ..",
     },
     task = {
-        ["start_task"] = "[E] To Start",
-        ["load_ingrediants"] = "[E] Load Ingredients",
-        ["wine_process"] = "[E] Start WineProcess",
-        ["get_wine"] = "[E] Get Wine",
-        ["make_grape_juice"] = "[E] Make Grape Juice",
+        ["start_task"] = "E To Start",
+        ["load_ingrediants"] = "E Load Ingredients",
+        ["wine_process"] = "E Start WineProcess",
+        ["get_wine"] = "E Get Wine",
+        ["make_grape_juice"] = "E Make Grape Juice",
         ["countdown"] = "Time Remaining %{time}s",
         ['cancel_task'] = "You have cancelled the task"
     },

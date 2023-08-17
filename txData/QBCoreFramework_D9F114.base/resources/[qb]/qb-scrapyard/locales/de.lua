@@ -10,7 +10,7 @@ local Translations = {
         scrapyard = 'Schrottplatz',
         disassemble_vehicle = '[E] - Fahrzeug demontieren',
         disassemble_vehicle_target = 'Fahrzeug demontieren',
-        email_list = "[E] - E-Mail Fahrzeugliste",
+        email_list = "E - E-Mail Fahrzeugliste",
         email_list_target = "E-Mail Fahrzeugliste",
         demolish_vehicle = "Fahrzeug demolieren",
     },

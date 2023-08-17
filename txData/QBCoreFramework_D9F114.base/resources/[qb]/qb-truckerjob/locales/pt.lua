@@ -31,7 +31,7 @@ local Translations = {
         job_completed = "Completou a sua rota, pode levantar o seu salário"
     },
     info = {
-        deliver_e = "[E] - Entregar produtos",
+        deliver_e = "E - Entregar produtos",
         deliver = "Entregar produtos",
     }
 }

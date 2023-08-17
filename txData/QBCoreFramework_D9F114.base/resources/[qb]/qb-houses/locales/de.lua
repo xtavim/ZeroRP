@@ -67,9 +67,9 @@ local Translations = {
         ["lock_door_police"] = "Tür abschließen"
     },
     target = {
-        ["open_stash"] = "[E] Schrank Öffnen",
-        ["outfits"] = "[E] Outfit Ändern",
-        ["change_character"] = "[E] Charakter Ändern",
+        ["open_stash"] = "E Schrank Öffnen",
+        ["outfits"] = "E Outfit Ändern",
+        ["change_character"] = "E Charakter Ändern",
     },
     log = {
         ["house_created"] = "Haus erstellt:",

@@ -57,7 +57,7 @@ local function RegisterTraphouseEntranceZone(traphouseID, traphouseData)
 
     zone:onPlayerInOut(function (isPointInside)
         if isPointInside then
-            exports['qb-core']:DrawText('[E] ' .. Lang:t('targetInfo.enter'), 'left')
+            exports['qb-core']:DrawText('E ' .. Lang:t('targetInfo.enter'), 'left')
         else
             exports['qb-core']:HideText()
         end
@@ -98,7 +98,7 @@ local function RegisterTraphouseInteractionZone(traphouseID, traphouseData)
 
     zone:onPlayerInOut(function (isPointInside)
         if isPointInside then
-            exports['qb-core']:DrawText('[E] ' .. Lang:t('targetInfo.options'), 'left')
+            exports['qb-core']:DrawText('E ' .. Lang:t('targetInfo.options'), 'left')
         else
             exports['qb-core']:HideText()
             TriggerEvent('qb-traphouse:client:target:CloseMenu')
@@ -176,7 +176,7 @@ local function RegisterTraphouseExitZone(coords, traphouseID, traphouseData)
 
     zone:onPlayerInOut(function (isPointInside)
         if isPointInside then
-            exports['qb-core']:DrawText('[E] ' .. Lang:t("targetInfo.leave"), 'left')
+            exports['qb-core']:DrawText('E ' .. Lang:t("targetInfo.leave"), 'left')
         else
             exports['qb-core']:HideText()
         end

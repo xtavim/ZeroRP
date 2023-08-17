@@ -103,7 +103,7 @@ local function RegisterDutyTarget()
         })
         zone:onPlayerInOut(function (isPointInside)
             if isPointInside then
-                exports['qb-core']:DrawText("[E] " .. label, 'left')
+                exports['qb-core']:DrawText("E " .. label, 'left')
             else
                 exports['qb-core']:HideText()
             end

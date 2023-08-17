@@ -47,8 +47,8 @@ local Translations = {
         ["payout_deposit"] = "(+ $%{value} depósito)",
         ["store_truck"] =  "~g~E~w~ - Guardar Camião do Lixo",
         ["get_truck"] =  "~g~E~w~ - Camião do Lixo",
-        ["picking_bag"] = "Grabbing garbage bag..",
-        ["talk"] = "[E] Talk to Garbage Man",
+        ["picking_bag"] = "A pegar no Saco do Lixo..",
+        ["talk"] = "E Falar com o Lixeiro",
     },
     warning = {},
 }

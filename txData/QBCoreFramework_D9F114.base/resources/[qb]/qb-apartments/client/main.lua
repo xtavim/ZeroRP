@@ -199,9 +199,9 @@ local function SetInApartmentTargets()
     local outfitsPos = vector3(Apartments.Locations[ClosestHouse].coords.enter.x - POIOffsets.clothes.x, Apartments.Locations[ClosestHouse].coords.enter.y - POIOffsets.clothes.y, Apartments.Locations[ClosestHouse].coords.enter.z - CurrentOffset + POIOffsets.clothes.z)
     local logoutPos = vector3(Apartments.Locations[ClosestHouse].coords.enter.x - POIOffsets.logout.x, Apartments.Locations[ClosestHouse].coords.enter.y + POIOffsets.logout.y, Apartments.Locations[ClosestHouse].coords.enter.z - CurrentOffset + POIOffsets.logout.z)
 
-    RegisterInApartmentZone('stashPos', stashPos, 0, "[E] " .. Lang:t('text.open_stash'))
-    RegisterInApartmentZone('outfitsPos', outfitsPos, 0, "[E] " .. Lang:t('text.change_outfit'))
-    RegisterInApartmentZone('logoutPos', logoutPos, 0, "[E] " .. Lang:t('text.logout'))
+    RegisterInApartmentZone('stashPos', stashPos, 0, "E " .. Lang:t('text.open_stash'))
+    RegisterInApartmentZone('outfitsPos', outfitsPos, 0, "E " .. Lang:t('text.change_outfit'))
+    RegisterInApartmentZone('logoutPos', logoutPos, 0, "E " .. Lang:t('text.logout'))
     RegisterInApartmentZone('entrancePos', entrancePos, 0, Lang:t('text.options'))
 end
 

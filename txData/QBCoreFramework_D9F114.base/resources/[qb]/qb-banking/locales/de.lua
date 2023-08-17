@@ -22,7 +22,7 @@ local Translations = {
     info = {
         bank_blip = "Bank",
         access_bank_target = "Bank öffnen",
-        access_bank_key = "[E] - Bank öffnen",
+        access_bank_key = "E - Bank öffnen",
         current_to_savings = "Momentanes Konto auf Sparkonto übertragen",
         savings_to_current = "Sparkonto auf Momentanes Konto übertragen"
     },

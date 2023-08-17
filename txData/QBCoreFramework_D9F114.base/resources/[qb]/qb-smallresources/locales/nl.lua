@@ -7,7 +7,7 @@ local Translations = {
     },
     wash = {
         in_progress = "Je voertuig wordt schoongemaakt ..",
-        wash_vehicle = "[E] Voertuig wassen",
+        wash_vehicle = "E Voertuig wassen",
         wash_vehicle_target = "Was Voertuig",
         dirty = "Het voertuig is niet vies",
         cancel = "Wassen geannuleerd ..",
@@ -57,7 +57,7 @@ local Translations = {
         teleport_default = 'Gebruik lift'
     },
     pushcar = {
-        stop_push = "[E] Stop met duwen"
+        stop_push = "E Stop met duwen"
     }
 
 }

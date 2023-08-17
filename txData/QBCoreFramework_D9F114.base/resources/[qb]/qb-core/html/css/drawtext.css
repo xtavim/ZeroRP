@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
 
 :root {
-    --primary-bg: rgba(23, 23, 23, 90%);
+    --primary-bg: rgb(23, 23, 23);
     --active-bg: #dc143c;
     --font-color: white;
 }
@@ -19,12 +19,18 @@
 
 .text {
     position: absolute;
-    background: var(--primary-bg);
+    background: var(--active-bg);;
     color: var(--font-color);
     margin-top: 0.5rem;
-    padding: 0.45rem;
-    border-radius: 0.15rem;
-    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.text::first-letter {
+    background: var(--primary-bg);
+    color: var(--font-color);
+    padding: 0.15rem 0.55rem;
+    border-radius: 0.25rem;
 }
 
 @media (width: 3840px) and (height: 2160px) {

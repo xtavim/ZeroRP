@@ -46,10 +46,10 @@ local Translations = {
         impound = "In Beslag",
     },
     info = {
-        car_e = "[E] Garage",
-        sea_e = "[E] Boot Garage",
-        air_e = "[E] Hangar",
-        park_e = "[E] Voertuig opslaan",
+        car_e = "E Garage",
+        sea_e = "E Boot Garage",
+        air_e = "E Hangar",
+        park_e = "E Voertuig opslaan",
         house_garage = "Huis garage",
     }
 }

@@ -9,11 +9,11 @@ local Translations = {
         ["process_grapes"] = "ყურძნის გადამუშავება..",
     },
     task = {
-        ["start_task"] = "[E] Დაწყება",
-        ["load_ingrediants"] = "[E] ჩატვირთეთ ინგრედიენტები",
-        ["wine_process"] = "[E] დაიწყეთ ღვინის პროცესი",
-        ["get_wine"] = "[E] მიიღეთ ღვინო",
-        ["make_grape_juice"] = "[E] მოამზადეთ ყურძნის წვენი",
+        ["start_task"] = "E Დაწყება",
+        ["load_ingrediants"] = "E ჩატვირთეთ ინგრედიენტები",
+        ["wine_process"] = "E დაიწყეთ ღვინის პროცესი",
+        ["get_wine"] = "E მიიღეთ ღვინო",
+        ["make_grape_juice"] = "E მოამზადეთ ყურძნის წვენი",
         ["countdown"] = "Დარჩენილი დრო %{time}s",
         ['cancel_task'] = "თქვენ გააუქმეთ დავალება"
     }

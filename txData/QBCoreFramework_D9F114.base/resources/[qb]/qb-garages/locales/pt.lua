@@ -46,10 +46,10 @@ local Translations = {
         impound = "Apreendido Pela Polícia",
     },
     info = {
-        car_e = "[E] Garagem",
-        sea_e = "[E] Doca",
-        air_e = "[E] Hangar",
-        park_e = "[E] Guardar Veículo",
+        car_e = "E Garagem",
+        sea_e = "E Doca",
+        air_e = "E Hangar",
+        park_e = "E Guardar Veículo",
         house_garage = "Garagem Particular",
     }
 }

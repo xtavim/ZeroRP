@@ -1,6 +1,7 @@
 let buttonParams = [];
 
 const openMenu = (data = null) => {
+    console.log('OPEN');
     let html = "";
     data.forEach((item, index) => {
         if(!item.hidden) {
@@ -22,6 +23,8 @@ const openMenu = (data = null) => {
             postData(target.attr('id'));
         }
     });
+
+    $("#buttons").show();
 };
 
 const getButtonRender = (header, message = null, id, isMenuHeader, isDisabled, icon) => {
@@ -37,6 +40,7 @@ const getButtonRender = (header, message = null, id, isMenuHeader, isDisabled, i
 };
 
 const closeMenu = () => {
+    $("#buttons").hide();
     $("#buttons").html(" ");
     buttonParams = [];
 };

@@ -1,7 +1,7 @@
 local Translations = {
     info = {
-        open_shop = "[E] მაღაზია",
-        sell_chips = "[E] Sell Chips"
+        open_shop = "E მაღაზია",
+        sell_chips = "E Sell Chips"
     },
     error = {
         dealer_decline = "დილერს არ სურს გაჩვენოთ პროდუქცია ლიცენზიის გარეშე",

@@ -1989,13 +1989,13 @@ function loadStores()
                     zoneName = zone.name
                     inZone = true
                     if zoneName == 'surgeon' then
-                        exports['qb-core']:DrawText('[E] - '..Lang:t("store.surgeon"), 'left')
+                        exports['qb-core']:DrawText('E - '..Lang:t("store.surgeon"), 'left')
                     elseif zoneName == 'clothing' then
-                        exports['qb-core']:DrawText('[E] - '..Lang:t("store.clothing"), 'left')
+                        exports['qb-core']:DrawText('E - '..Lang:t("store.clothing"), 'left')
                     elseif zoneName == 'barber' then
-                        exports['qb-core']:DrawText('[E] - '..Lang:t("store.barber"), 'left')
+                        exports['qb-core']:DrawText('E - '..Lang:t("store.barber"), 'left')
                     elseif zoneName == 'outfit' then 
-                        exports['qb-core']:DrawText('[E] - '..Lang:t("store.outfitchanger"), 'left')
+                        exports['qb-core']:DrawText('E - '..Lang:t("store.outfitchanger"), 'left')
                     end
                 else
                     inZone = false
@@ -2011,7 +2011,7 @@ function loadStores()
                                 if (job == Config.ClothingRooms[zoneID].requiredJob) then
                                     zoneName = zoneID
                                     inZone = true
-                                    exports['qb-core']:DrawText('[E] - '..Lang:t("store.clothing"), 'left')
+                                    exports['qb-core']:DrawText('E - '..Lang:t("store.clothing"), 'left')
                                 end
                             else
                                 inZone = false

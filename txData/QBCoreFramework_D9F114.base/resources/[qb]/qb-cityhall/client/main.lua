@@ -176,10 +176,10 @@ local function spawnPeds()
                         if inside then
                             if current.drivingschool then
                                 inRangeDrivingSchool = true
-                                exports['qb-core']:DrawText('[E] Take Driving Lessons')
+                                exports['qb-core']:DrawText('E Ter Aulas de Condução')
                             elseif current.cityhall then
                                 inRangeCityhall = true
-                                exports['qb-core']:DrawText('[E] Open Cityhall')
+                                exports['qb-core']:DrawText('E Abrir Casa do Governo')
                             end
                         else
                             exports['qb-core']:HideText()

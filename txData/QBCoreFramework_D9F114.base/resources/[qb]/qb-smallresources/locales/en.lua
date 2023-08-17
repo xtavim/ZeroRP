@@ -7,7 +7,7 @@ local Translations = {
     },
     wash = {
         in_progress = "Vehicle is being washed ..",
-        wash_vehicle = "[E] Wash Vehicle",
+        wash_vehicle = "E Wash Vehicle",
         wash_vehicle_target = "Wash Vehicle",
         dirty = "The vehicle isn't dirty",
         cancel = "Washing canceled ..",
@@ -57,7 +57,7 @@ local Translations = {
         teleport_default = 'Use Elevator'
     },
     pushcar = {
-        stop_push = "[E] Stop Pushing"
+        stop_push = "E Stop Pushing"
     }
 
 

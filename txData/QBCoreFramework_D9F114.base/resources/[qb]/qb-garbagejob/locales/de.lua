@@ -45,7 +45,7 @@ local Translations = {
         ["store_truck"] =  "~g~E~w~ - Müllwagen Einparken",
         ["get_truck"] =  "~g~E~w~ - Müllwagen",
         ["picking_bag"] = "Grabbing garbage bag..",
-        ["talk"] = "[E] Talk to Garbage Man",
+        ["talk"] = "E Talk to Garbage Man",
     },
     warning = {},
 }

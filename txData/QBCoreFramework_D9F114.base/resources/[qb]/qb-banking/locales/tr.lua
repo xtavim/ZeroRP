@@ -22,7 +22,7 @@ local Translations = {
     info = {
         bank_blip = "Banka",
         access_bank_target = "Bankaya Eriş",
-        access_bank_key = "[E] - Bankaya Eriş",
+        access_bank_key = "E - Bankaya Eriş",
         current_to_savings = "Cari Hesabı Birikimlere Aktar",
         savings_to_current = "Birikimleri Cari Hesaba Aktar",
     },

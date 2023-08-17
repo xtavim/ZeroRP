@@ -10,10 +10,10 @@ local Translations = {
     },
     task = {
         ["start_task"] = "Paina [E] aloittaaksesi",
-        ["load_ingrediants"] = "[E] Lastaa ainesosat",
-        ["wine_process"] = "[E] Aloita viininteko",
-        ["get_wine"] = "[E] Tee viiniä",
-        ["make_grape_juice"] = "[E] Tee rypälemehua",
+        ["load_ingrediants"] = "E Lastaa ainesosat",
+        ["wine_process"] = "E Aloita viininteko",
+        ["get_wine"] = "E Tee viiniä",
+        ["make_grape_juice"] = "E Tee rypälemehua",
         ["countdown"] = "Aikaa jäljellä %{time}s",
         ['cancel_task'] = "Olet peruuttanut tehtävän!"
     }
