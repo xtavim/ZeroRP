@@ -403,17 +403,6 @@ Config.Garages = {
         ["job"] = "police",
         ["jobType"] = "leo"
     },
-    ["rigdepot"] = {
-        ["label"] = "Big Rig Depot",
-        ["takeVehicle"] = vector3(2373.64, 3104.58, 48.05),
-        ["spawnPoint"] = vector4(2373.63, 3110.19, 48.12, 123.26),
-        ["showBlip"] = true,
-        ["blipName"] = "Big Rig Depot",
-        ["blipNumber"] = 68,
-        ["blipColor"] = 2,
-        ["type"] = "depot",                --public, job, gang, depot
-        ["vehicle"] = "rig"                 --car, air, sea, rig
-    },
     ["dumborigparking"] = {
         ["label"] = "Dumbo Big Rig Parking",
         ["takeVehicle"] = vector3(161.23, -3188.73, 5.97),
