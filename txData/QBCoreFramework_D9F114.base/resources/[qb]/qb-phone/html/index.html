@@ -34,6 +34,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> <!-- Bootstrap -->
     <script src="https://code.jquery.com/color/jquery.color-2.2.0.min.js" integrity="sha256-aSe2ZC5QeunlL/w/7PsVKmV+fa0eDbmybn/ptsKHR6I=" crossorigin="anonymous"></script> <!-- Color CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css" integrity="sha512-vEia6TQGr3FqC6h55/NdU3QSM5XR6HSl5fW71QTKrgeER98LIMGwymBVM867C1XHIkYD9nMTfWK2A0xcodKHNA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <!-- Bootstrap -->
 </head>
@@ -464,7 +465,7 @@
 
                     <div class="gallery-app">
                         <div class="gallery-app-header">
-                            My Gallery
+                            Fotografias
                         </div>
                         <div class="gallery-homescreen">
                             <div class="gallery-images">
@@ -473,18 +474,17 @@
 
                         <div class="gallery-detailscreen">
                             <div class="gallery-details">
-                                <div class="imagedata"><img class="image" id="imagedata" style="width: 100%;" src="" alt=""></div>
-                                <div class="make-post-button">
+                                <div class="imagedata"><img class="gallery-details-image" id="imagedata" style="width: 100%;" src="" alt=""></div>
+                                
+                                <div class="gallery-action-buttons">
                                     <div id="make-post-button">
-                                        POST
+                                        <i class="fas fa-share"></i>
                                     </div>
                                     <div id="delete-button">
                                         <i class="fas fa-trash-alt"></i>
                                     </div>
-                                </div>
-                                <div class="return-button">
                                     <div id="return-button">
-                                        RETURN
+                                        <i class="fas fa-long-arrow-alt-left"></i>
                                     </div>
                                 </div>
                             </div>
@@ -492,17 +492,16 @@
                         <div class="gallery-postscreen">
                             <div class="gallery-details">
                                 <div class="imageTweetData"><textarea id="new-textarea" spellcheck="false" required></textarea></div>
-                                <div class="posts-button">
+                                
+                                <div class="gallery-action-buttons">
                                     <div id="tweet-button">
-                                        <i class="fab fa-twitter fa-lg"></i>
+                                        <i class="fa-brands fa-x-twitter"></i>
                                     </div>
                                     <div id="advert-button">
                                         <i class="fas fa-ad fa-lg"></i>
                                     </div>
-                                </div>
-                                <div class="return-button">
                                     <div id="returndetail-button">
-                                        RETURN
+                                        <i class="fas fa-long-arrow-alt-left"></i>
                                     </div>
                                 </div>
                             </div>
@@ -766,7 +765,7 @@
                     <div class="advert-app">
                         <div class="advert-home">
                             <div class="advert-header">
-                                <span id="advert-header-text">Advertisements</span>
+                                <span id="advert-header-text">Páginas Amarelas</span>
                                 <span id="advert-header-name"></span>
                             </div>
                             <div class="advert-list">
@@ -779,11 +778,11 @@
 
                         <div class="new-advert">
                             <div class="new-advert-header">
-                                <span id="new-advert-header-text">New advertisement</span>
+                                <span id="new-advert-header-text">Novo Anúncio</span>
                             </div>
 
                             <textarea class="new-advert-textarea" spellcheck="false" required></textarea>
-                            <span><textarea id="advert-new-url" style="text-align:left; padding-left:15px;" placeholder="Picture URL" cols="30" rows="10" spellcheck="false"></textarea></span>
+                            <span><textarea id="advert-new-url" style="text-align:left; padding-left:15px;" placeholder="URL" cols="30" rows="10" spellcheck="false"></textarea></span>
 
                             <div class="new-advert-footer">
                                 <div class="new-advert-footer-item" id="new-advert-submit">
@@ -802,7 +801,7 @@
                     <div class="mail-app">
                         <div class="mail-home">
                             <div class="mail-header">
-                                <span id="mail-header-text">Inbox</span>
+                                <span id="mail-header-text">Email</span>
                                 <span id="mail-header-mail">jay.nandes@qbcore.com</span>
                                 <span id="mail-header-lastsync">Last synchronization 18:31</span>
                             </div>
@@ -971,11 +970,11 @@
                     <div class="twitter-app">
 
                         <div class="twitter-home-tab">
-                             <div class="twitter-no-tweets"><p>No tweets</p></div>
+                             <div class="twitter-no-tweets"><p>Sem Tweets</p></div>
                         </div>
 
                         <div class="twitter-mentions-tab">
-                            <div class="twitter-no-tweets"><p>No mentions</p></div>
+                            <div class="twitter-no-tweets"><p>Sem Menções</p></div>
                         </div>
 
                         <div class="twitter-hashtags-tab">
@@ -984,7 +983,7 @@
                                 </div>
                             </div>
                             <div class="twitter-hashtags">
-                                <div class="twitter-no-tweets"><p>No hashtags</p></div>
+                                <div class="twitter-no-tweets"><p>Sem Hashtags</p></div>
                             </div>
                         </div>
 
@@ -993,7 +992,7 @@
                         </div>
 
                         <div class="twitter-new-tweet-tab">
-                            <div class="twitter-new-tweet-header"><p>New Tweet</p></div>
+                            <div class="twitter-new-tweet-header"><p>Novo Tweet</p></div>
 
                             <textarea id="tweet-new-message" placeholder="Twitter message" cols="30" rows="10" spellcheck="false" required></textarea>
                             <span><textarea id="tweet-new-url" style="text-align:left; padding-left:15px;" placeholder="Picture URL" cols="30" rows="10" spellcheck="false"></textarea></span>
@@ -1123,7 +1122,7 @@
 
         <div class="screen-notifications-container">
             <div class="screen-notification-icon"><i class="fab fa-twitter"></i></div>
-            <div class="screen-notification-title"><p>New Tweet!</p></div>
+            <div class="screen-notification-title"><p>Novo Tweet!</p></div>
             <div class="screen-notification-content"><p>This is a test notification </p></div>
         </div>
 

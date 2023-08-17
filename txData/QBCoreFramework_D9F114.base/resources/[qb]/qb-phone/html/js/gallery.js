@@ -2,7 +2,7 @@ function setUpGalleryData(Images){
     $(".gallery-images").html("");
     if (Images != null) {
         $.each(Images, function(i, image){
-            var Element = '<div class="gallery-image"><img src="'+image.image+'" alt="'+image.citizenid+'" class="tumbnail"></div>';
+            var Element = '<div class="gallery-image"><img src="'+image.image+'" alt="'+image.citizenid+'" class="thumbnail"></div>';
             
             $(".gallery-images").append(Element);
             $("#image-"+i).data('ImageData', image);
@@ -10,7 +10,7 @@ function setUpGalleryData(Images){
     }
 }
 
-$(document).on('click', '.tumbnail', function(e){
+$(document).on('click', '.thumbnail', function(e){
     e.preventDefault();
     let source = $(this).attr('src')
     // QB.Screen.popUp(source)
@@ -40,13 +40,11 @@ $(document).on('click', '#delete-button', function(e){
                 $('#return-button').click()
                 $.post('https://qb-phone/GetGalleryData', JSON.stringify({}), function(data){
                     setTimeout(()=>{
-                            setUpGalleryData(data);
-                        
+                        setUpGalleryData(data);
                     },200)
                 });
             },200)
         })
-        
     }, 200);
 });
 
@@ -79,7 +77,7 @@ $(document).on('click', '#return-button', function(e){
     e.preventDefault();
 
     $(".gallery-homescreen").animate({
-        left: 00+"vh"
+        left: 0+"vh"
     }, 200);
     $(".gallery-detailscreen").animate({
         left: -30+"vh"
@@ -94,7 +92,7 @@ $(document).on('click', '#returndetail-button', function(e){
 
 function returnDetail(){
     $(".gallery-detailscreen").animate({
-        left: 00+"vh"
+        left: 0+"vh"
     }, 200);
     $(".gallery-postscreen").animate({
         left: -30+"vh"
