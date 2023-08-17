@@ -643,31 +643,9 @@ Config.DoorList = {
 		pickable = false,
 		distance = 2.0,
 	},
-	-- Hallway (double doors)
-	{
-		textCoords = vec3(-442.09, 6011.93, 31.86523),
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 2.5,
-		doors = {
-			{
-				objName = 'v_ilev_rc_door2',
-				objYaw = 225.0,
-				objCoords  = vec3(-441.0185, 6012.795, 31.86523),
-			},
-
-			{
-				objName = 'v_ilev_rc_door2',
-				objYaw = 45.0,
-				objCoords  = vec3(-442.8578, 6010.958, 31.86523)
-			}
-		}
-	},
 	-- Hallway to the back (double doors)
 	{
 		textCoords = vec3(-448.67, 6007.52, 31.86523),
-		authorizedJobs = { 'police' },
 		locked = true,
 		pickable = false,
 		distance = 2.5,
@@ -1648,6 +1626,168 @@ Config.DoorList = {
 			}
 		}
 	},
+	-- Ballas
+	-- Porta Entrada
+	{
+        objHash = 23523831,
+        objCoords  = vector3(115.04, -1961.36, 21.42),
+        textCoords = vector3(115.04, -1961.36, 21.42),
+        authorizedGangs = { 'ballas' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 2.0,
+		doorType = 'garage'
+    },
+	-- Porta Traseiras
+	{
+        objHash = -1912632538,
+        objCoords  = vector3(113.93, -1973.5, 21.42),
+        textCoords = vector3(113.93, -1973.5, 21.42),
+        authorizedGangs = { 'ballas' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 2.0,
+		doorType = 'garage'
+    },
+	-- Porta Armazem
+	{
+        objHash = -1730259609,
+        objCoords  = vector3(111.44, -1979.29, 21.06),
+        textCoords = vector3(111.44, -1979.29, 21.06),
+        authorizedGangs = { 'ballas' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 2.0,
+		doorType = 'garage'
+    },
+	-- Porta Armazem 2
+	{
+        objHash = 1122314606,
+        objCoords  = vector3(104.63, -1977.14, 21.06),
+        textCoords = vector3(104.63, -1977.14, 21.06),
+        authorizedGangs = { 'ballas' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 2.0,
+		doorType = 'garage'
+    },
+	{
+		textCoords = vector3(109.14, -1975.46, 21.17),
+		authorizedGangs = { 'ballas' },
+		locked = true,
+		pickable = false,
+		distance = 1.0,
+		doors = {
+			{
+				objHash = 1184805384,
+				objYaw = -90.0,
+				objCoords = vector3(109.14, -1975.46, 21.17)
+			},
+
+			{
+				objHash = 1947176169,
+				objYaw = -90.0,
+				objCoords = vec3(106.52, -1976.45, 21.17)
+			}
+		}
+	},
+	-- Garagem
+	{
+        objHash = -1118363016,
+        objCoords  = vector3(102.74, -1960.26, 21.01),
+        textCoords = vector3(102.74, -1960.26, 21.01),
+        authorizedGangs = { 'ballas' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 0.5,
+		doorType = 'garage'
+    },
+	-- Porta Garagem
+	{
+        objHash = 1122314606,
+        objCoords  = vector3(105.96, -1963.83, 20.94),
+        textCoords = vector3(105.96, -1963.83, 20.94),
+        authorizedGangs = { 'ballas' },
+        objYaw = 0,
+        locked = true,
+        pickable = false,
+        distance = 2.0,
+        doorRate = 0.5,
+		doorType = 'garage'
+    },
+	-- Portas Traseiras
+	{
+		textCoords = vector3(119.17, -1973.64, 21.42),
+		authorizedGangs = { 'ballas' },
+		locked = true,
+		pickable = false,
+		distance = 1.0,
+		doors = {
+			{
+				objHash = -204046185,
+				objYaw = -90.0,
+				objCoords = vector3(119.17, -1973.64, 21.42)
+			},
+
+			{
+				objHash = 989957872,
+				objYaw = -90.0,
+				objCoords = vec3(117.1, -1974.35, 21.42)
+			}
+		}
+	},
+	-- Portas Traseiras 2
+	{
+		textCoords = vector3(95.83, -1986.4, 20.62),
+		authorizedGangs = { 'ballas' },
+		locked = true,
+		pickable = false,
+		distance = 1.0,
+		doors = {
+			{
+				objHash = 1805008497,
+				objYaw = -90.0,
+				objCoords = vector3(95.83, -1986.4, 20.62)
+			},
+
+			{
+				objHash = -167783606,
+				objYaw = -90.0,
+				objCoords = vec3(93.71, -1984.1, 20.62)
+			}
+		}
+	},
+	-- Portas Traseiras 3
+	{
+		textCoords = vector3(93.16, -1983.58, 20.62),
+		authorizedGangs = { 'ballas' },
+		locked = true,
+		pickable = false,
+		distance = 1.0,
+		doors = {
+			{
+				objHash = 1805008497,
+				objYaw = -90.0,
+				objCoords = vector3(93.16, -1983.58, 20.62)
+			},
+
+			{
+				objHash = -167783606,
+				objYaw = -90.0,
+				objCoords = vec3(91.04, -1981.28, 20.62)
+			}
+		}
+	},
 	-- Crips
 	-- Portas Principais
 	{
@@ -2019,4 +2159,5 @@ Config.DoorList = {
         distance = 2.0,
         doorRate = 0.5
     },
+	
 }
