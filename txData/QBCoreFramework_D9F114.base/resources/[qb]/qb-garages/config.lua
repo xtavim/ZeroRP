@@ -185,6 +185,30 @@ Config.Garages = {
         ["type"] = "public",                --public, job, gang, depot
         ["vehicle"] = "car"                 --car, air, sea, rig
     },
+    ["garagemfarol"] = {
+        ["label"] = "Garagem Farol",
+        ["takeVehicle"] = vector3(3804.51, 4471.14, 4.75),
+        ["spawnPoint"] = vector4(3806.33, 4464.8, 4.51, 87.42),
+        ["putVehicle"] = vector3(3817.5, 4461.44, 3.81),
+        ["showBlip"] = true,
+        ["blipName"] = "Public Parking",
+        ["blipNumber"] = 357,
+        ["blipColor"] = 3,
+        ["type"] = "public",                --public, job, gang, depot
+        ["vehicle"] = "car"                 --car, air, sea, rig
+    },
+    ["garagemmotel"] = {
+        ["label"] = "Garagem Motel",
+        ["takeVehicle"] = vector3(299.51, -234.37, 53.94),
+        ["spawnPoint"] = vector4(294.47, -233.05, 53.96, 189.44),
+        ["putVehicle"] = vector3(288.83, -230.61, 53.94),
+        ["showBlip"] = true,
+        ["blipName"] = "Public Parking",
+        ["blipNumber"] = 357,
+        ["blipColor"] = 3,
+        ["type"] = "public",                --public, job, gang, depot
+        ["vehicle"] = "car"                 --car, air, sea, rig
+    },
     --[[    ["hayesdepot"] = {
         ["label"] = "Hayes Depot",
         ["takeVehicle"] = vector3(491.0, -1314.69, 29.25),
