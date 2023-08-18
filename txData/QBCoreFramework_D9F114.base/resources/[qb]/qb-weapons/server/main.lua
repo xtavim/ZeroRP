@@ -3,14 +3,18 @@ local QBCore = exports['qb-core']:GetCoreObject()
 -- Functions
 
 local function IsWeaponBlocked(WeaponName)
-    local retval = false
-    for _, name in pairs(Config.DurabilityBlockedWeapons) do
-        if name == WeaponName then
-            retval = true
-            break
+    if Config.EnableDurability then 
+        local retval = false
+        for _, name in pairs(Config.DurabilityBlockedWeapons) do
+            if name == WeaponName then
+                retval = true
+                break
+            end
         end
+        return retval
+    else
+        return true
     end
-    return retval
 end
 
 local function HasAttachment(component, attachments)

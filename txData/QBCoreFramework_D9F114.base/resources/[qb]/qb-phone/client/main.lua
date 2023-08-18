@@ -869,6 +869,12 @@ RegisterNUICallback('track-vehicle', function(data, cb)
     cb("ok")
 end)
 
+RegisterNUICallback('delete-vehicle-waypoint', function()
+    DeleteWaypoint()
+
+    cb("ok")
+end)
+
 RegisterNUICallback('DeleteContact', function(data, cb)
     local Name = data.CurrentContactName
     local Number = data.CurrentContactNumber

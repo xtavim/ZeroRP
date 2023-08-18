@@ -108,6 +108,7 @@
 }
 
 .garage-cardetails {    
+    background: rgb(5, 5, 5);
     position: absolute;
     width: 85%;
     height: 41vh;

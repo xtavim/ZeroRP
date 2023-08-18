@@ -1,6 +1,7 @@
 Config = Config or {}
 
 Config.ReloadTime = math.random(4000, 6000)
+Config.EnableDurability = false -- True to enable durability
 
 Config.DurabilityBlockedWeapons = {
     "weapon_stungun",
