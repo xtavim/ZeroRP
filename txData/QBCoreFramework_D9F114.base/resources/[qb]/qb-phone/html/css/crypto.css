@@ -4,14 +4,14 @@
     display: none;
     height: 100%;
     width: 100%;
-    background-color: rgb(38, 38, 38);
+    background-color: rgb(5, 5, 5);
     overflow: hidden;
 }
 
 .crypto-action-page {
     position: absolute;
     top: 0;
-    left: -30vh;
+    right: -30vh;
     height: 100%;
     width: 100%;
     z-index: 1;

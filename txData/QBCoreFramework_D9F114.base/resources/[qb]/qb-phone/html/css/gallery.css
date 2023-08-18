@@ -4,7 +4,7 @@
     display: none;
     height: 100%;
     width: 100%;
-    background: black;
+    background: rgb(5, 5, 5);
     overflow: hidden;
 }
 
@@ -12,12 +12,13 @@
     position: absolute;
     height: 9vh;
     width: 100%;
-    background-color: black;
+    background-color: rgb(5, 5, 5);
     text-align: center;
     line-height: 12.5vh;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5vh;
+    font-weight: bold;
 }
 
 .gallery-homescreen {
@@ -31,13 +32,13 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    left: -30vh;
+    right: -30vh;
 }
 .gallery-postscreen {
     position: absolute;
     height: 100%;
     width: 100%;
-    left: -30vh;
+    right: -30vh;
 }
 
 .gallery-images {
@@ -123,4 +124,21 @@
     font-size: 1.4vh;
     top: 12vh;
     width: 100%;
+}
+
+#return-button-gallery {
+    top: 5.1vh;
+    position: absolute;
+    z-index: 1;
+    left: 2vh;
+
+    cursor: pointer;
+    color: white;
+
+    height: 2.3vh;
+    width: 2.3vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

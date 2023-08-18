@@ -4,10 +4,10 @@ $(document).on('click', '.mail', function(e){
     e.preventDefault();
 
     $(".mail-home").animate({
-        left: 30+"vh"
+        right: 30+"vh"
     }, 300);
     $(".opened-mail").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 300);
 
     var MailData = $("#"+$(this).attr('id')).data('MailData');
@@ -20,10 +20,10 @@ $(document).on('click', '.mail-back', function(e){
     e.preventDefault();
 
     $(".mail-home").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 300);
     $(".opened-mail").animate({
-        left: -30+"vh"
+        right: -30+"vh"
     }, 300);
     OpenedMail = null;
 });
@@ -37,10 +37,10 @@ $(document).on('click', '#accept-mail', function(e){
         mailId: MailData.mailid,
     }));
     $(".mail-home").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 300);
     $(".opened-mail").animate({
-        left: -30+"vh"
+        right: -30+"vh"
     }, 300);
 });
 
@@ -51,10 +51,10 @@ $(document).on('click', '#remove-mail', function(e){
         mailId: MailData.mailid
     }));
     $(".mail-home").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 300);
     $(".opened-mail").animate({
-        left: -30+"vh"
+        right: -30+"vh"
     }, 300);
 });
 
@@ -121,10 +121,10 @@ QB.Phone.Functions.SetupMail = function(MailData) {
 $(document).on('click', '.test-slet', function(e){
     e.preventDefault();
     $(".advert-home").animate({
-        left: 30+"vh"
+        right: 30+"vh"
     });
     $(".new-advert").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     });
 });
 
@@ -147,10 +147,10 @@ $(document).on('click', '#new-advert-back', function(e){
     e.preventDefault();
 
     $(".advert-home").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     });
     $(".new-advert").animate({
-        left: -30+"vh"
+        right: -30+"vh"
     });
 });
 
@@ -161,10 +161,10 @@ $(document).on('click', '#new-advert-submit', function(e){
 
     if (Advert !== "") {
         $(".advert-home").animate({
-            left: 0+"vh"
+            right: 0+"vh"
         });
         $(".new-advert").animate({
-            left: -30+"vh"
+            right: -30+"vh"
         });
         if (!picture){
             $.post('https://qb-phone/PostAdvert', JSON.stringify({

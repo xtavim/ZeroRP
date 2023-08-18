@@ -15,10 +15,10 @@ $(document).on('click', '.thumbnail', function(e){
     let source = $(this).attr('src')
     // QB.Screen.popUp(source)
     $(".gallery-homescreen").animate({
-        left: 30+"vh"
+        left: -30+"vh"
     }, 200);
     $(".gallery-detailscreen").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 200);
     SetupImageDetails(source);
 });
@@ -37,7 +37,7 @@ $(document).on('click', '#delete-button', function(e){
     setTimeout(() => {
         $.post('https://qb-phone/DeleteImage', JSON.stringify({image:source}), function(Hashtags){
             setTimeout(()=>{
-                $('#return-button').click()
+                $('#return-button-gallery').click()
                 $.post('https://qb-phone/GetGalleryData', JSON.stringify({}), function(data){
                     setTimeout(()=>{
                         setUpGalleryData(data);
@@ -64,23 +64,23 @@ $(document).on('click', '#make-post-button', function(e){
 
     // QB.Screen.popUp(source)
     $(".gallery-detailscreen").animate({
-        left: 30+"vh"
+        right: 30+"vh"
     }, 200);
     $(".gallery-postscreen").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 200);
     SetupPostDetails();
 });
 
 
-$(document).on('click', '#return-button', function(e){
+$(document).on('click', '#return-button-gallery', function(e){
     e.preventDefault();
 
     $(".gallery-homescreen").animate({
         left: 0+"vh"
     }, 200);
     $(".gallery-detailscreen").animate({
-        left: -30+"vh"
+        right: -30+"vh"
     }, 200);
 });
 
@@ -92,10 +92,10 @@ $(document).on('click', '#returndetail-button', function(e){
 
 function returnDetail(){
     $(".gallery-detailscreen").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 200);
     $(".gallery-postscreen").animate({
-        left: -30+"vh"
+        right: -30+"vh"
     }, 200);
 }
 
@@ -135,10 +135,10 @@ $(document).on('click', '#advert-button', function(e){
 
     if (Advert !== "") {
         $(".advert-home").animate({
-            left: 0+"vh"
+            right: 0+"vh"
         });
         $(".new-advert").animate({
-            left: -30+"vh"
+            right: -30+"vh"
         });
         if (!picture){
             $.post('https://qb-phone/PostAdvert', JSON.stringify({

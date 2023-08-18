@@ -253,8 +253,8 @@ $(document).on('click', '#new-chat-phone', function(e){
 
             $('.whatsapp-openedchat-messages').animate({scrollTop: 9999}, 150);
             $(".whatsapp-openedchat").css({"display":"block"});
-            $(".whatsapp-openedchat").css({left: 0+"vh"});
-            $(".whatsapp-chats").animate({left: 30+"vh"},100, function(){
+            $(".whatsapp-openedchat").css({right: 0+"vh"});
+            $(".whatsapp-chats").animate({right: 30+"vh"},100, function(){
                 $(".whatsapp-chats").css({"display":"none"});
             });
         }, 400)

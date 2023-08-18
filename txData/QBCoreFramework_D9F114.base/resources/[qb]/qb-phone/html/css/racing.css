@@ -4,7 +4,7 @@
     display: none;
     height: 100%;
     width: 100%;
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(5, 5, 5);
     overflow: hidden;
 }
 
@@ -25,6 +25,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.8vh;
     text-shadow: .1vh .1vh 0px #000000;
+    font-weight: bold;
 }
 
 .racing-races {
@@ -216,7 +217,7 @@
     height: 100%;
     background-color: rgb(31, 31, 31);
     z-index: 102;
-    left: -30vh;
+    right: -30vh;
 }
 
 .racing-setup-track {
@@ -566,7 +567,7 @@
     height: 100%;
     background-color: rgb(31, 31, 31);
     z-index: 102;
-    left: -30vh;
+    right: -30vh;
 }
 
 .racing-leaderboards {

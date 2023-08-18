@@ -22,21 +22,21 @@ $(document).on('click', '.bank-app-header-button', function(e){
 
         if (PressedTab == "invoices") {
             $(".bank-app-"+CurrentTab).animate({
-                left: -30+"vh"
+                right: -30+"vh"
             }, 250, function(){
                 $(".bank-app-"+CurrentTab).css({"display":"none"})
             });
             $(".bank-app-"+PressedTab).css({"display":"block"}).animate({
-                left: 0+"vh"
+                right: 0+"vh"
             }, 250);
         } else if (PressedTab == "accounts") {
             $(".bank-app-"+CurrentTab).animate({
-                left: 30+"vh"
+                right: 30+"vh"
             }, 250, function(){
                 $(".bank-app-"+CurrentTab).css({"display":"none"})
             });
             $(".bank-app-"+PressedTab).css({"display":"block"}).animate({
-                left: 0+"vh"
+                right: 0+"vh"
             }, 250);
         }
 
@@ -53,8 +53,8 @@ QB.Phone.Functions.DoBankOpen = function() {
     $(".bank-app-account-balance").data('balance', QB.Phone.Data.PlayerData.money.bank);
 
     $(".bank-app-loaded").css({"display":"none", "padding-left":"30vh"});
-    $(".bank-app-accounts").css({"left":"30vh"});
-    $(".qbank-logo").css({"left": "0vh"});
+    $(".bank-app-accounts").css({"right":"30vh"});
+    $(".qbank-logo").css({"right":"0vh"});
     $("#qbank-text").css({"opacity":"0.0", "left":"9vh"});
     $(".bank-app-loading").css({
         "display":"block",
@@ -75,7 +75,7 @@ QB.Phone.Functions.DoBankOpen = function() {
             $(".bank-app-loaded").css({"display":"block"}).animate({"padding-left":"0"}, 300);
             $(".bank-app-accounts").animate({left:0+"vh"}, 300);
             $(".bank-app-loading").animate({
-                left: -30+"vh"
+                right: -30+"vh"
             },300, function(){
                 $(".bank-app-loading").css({"display":"none"});
             });
@@ -148,7 +148,7 @@ $(document).on('click', '.pay-invoice', function(event){
         }), function(CanPay){
             if (CanPay) {
                 $("#"+InvoiceId).animate({
-                    left: 30+"vh",
+                    right: 30+"vh",
                 }, 300, function(){
                     setTimeout(function(){
                         $("#"+InvoiceId).remove();
@@ -180,7 +180,7 @@ $(document).on('click', '.decline-invoice', function(event){
         invoiceId: InvoiceData.id,
     }));
     $("#"+InvoiceId).animate({
-        left: 30+"vh",
+        right: 30+"vh",
     }, 300, function(){
         setTimeout(function(){
             $("#"+InvoiceId).remove();

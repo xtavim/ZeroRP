@@ -125,7 +125,7 @@ $(document).on('click', '#cancel-crypto', function(e){
     e.preventDefault();
 
     $(".crypto-action-page").animate({
-        left: -30+"vh",
+        right: -30+"vh",
     }, 300, function(){
         $(".crypto-action-page-"+ActionTab).css({"display":"none"});
         $(".crypto-action-page").css({"display":"none"});
@@ -136,7 +136,7 @@ $(document).on('click', '#cancel-crypto', function(e){
 
 function CloseCryptoPage() {
     $(".crypto-action-page").animate({
-        left: -30+"vh",
+        right: -30+"vh",
     }, 300, function(){
         $(".crypto-action-page-"+ActionTab).css({"display":"none"});
         $(".crypto-action-page").css({"display":"none"});

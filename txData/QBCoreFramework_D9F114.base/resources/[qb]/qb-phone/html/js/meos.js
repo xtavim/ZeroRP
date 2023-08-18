@@ -11,10 +11,10 @@ OpenMeosPage = function(page) {
     CurrentMeosPage = page;
     $(".meos-"+CurrentMeosPage+"-page").css({"display":"block"});
     $(".meos-homescreen").animate({
-        left: 30+"vh"
+        right: 30+"vh"
     }, 200);
     $(".meos-tabs").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 200, function(){
         $(".meos-tabs-footer").animate({
             bottom: 0,
@@ -36,7 +36,7 @@ MeosHomePage = function() {
     }, 200);
     setTimeout(function(){
         $(".meos-homescreen").animate({
-            left: 0+"vh"
+            right: 0+"vh"
         }, 200, function(){
             if (CurrentMeosPage == "alerts") {
                 $(".meos-alert-new").remove();
@@ -47,7 +47,7 @@ MeosHomePage = function() {
             $(".vehicle-search-results").html("");
         });
         $(".meos-tabs").animate({
-            left: -30+"vh"
+            right: -30+"vh"
         }, 200);
     }, 400);
 }

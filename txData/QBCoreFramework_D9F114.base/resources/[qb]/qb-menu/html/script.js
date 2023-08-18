@@ -1,7 +1,6 @@
 let buttonParams = [];
 
 const openMenu = (data = null) => {
-    console.log('OPEN');
     let html = "";
     data.forEach((item, index) => {
         if(!item.hidden) {

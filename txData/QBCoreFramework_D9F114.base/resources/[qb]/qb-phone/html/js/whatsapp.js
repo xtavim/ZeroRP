@@ -41,11 +41,11 @@ $(document).on('click', '.whatsapp-chat', function(e){
 
     $(".whatsapp-openedchat").css({"display":"block"});
     $(".whatsapp-openedchat").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     },200);
 
     $(".whatsapp-chats").animate({
-        left: 30+"vh"
+        right: 30+"vh"
     },200, function(){
         $(".whatsapp-chats").css({"display":"none"});
     });
@@ -69,10 +69,10 @@ $(document).on('click', '#whatsapp-openedchat-back', function(e){
     OpenedChatData.number = null;
     $(".whatsapp-chats").css({"display":"block"});
     $(".whatsapp-chats").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 200);
     $(".whatsapp-openedchat").animate({
-        left: -30+"vh"
+        right: -30+"vh"
     }, 200, function(){
         $(".whatsapp-openedchat").css({"display":"none"});
     });
@@ -355,7 +355,7 @@ $(document).on('click', '#whatsapp-openedchat-message-extras', function(e){
 
     if (!ExtraButtonsOpen) {
         $(".whatsapp-extra-buttons").css({"display":"block"}).animate({
-            left: 0+"vh"
+            right: 0+"vh"
         }, 250);
         ExtraButtonsOpen = true;
     } else {

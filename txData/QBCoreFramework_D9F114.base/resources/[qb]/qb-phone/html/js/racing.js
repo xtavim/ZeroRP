@@ -233,7 +233,7 @@ $(document).on('click', '#setup-race', function(e){
     e.preventDefault();
 
     $(".racing-overview").animate({
-        left: 30+"vh"
+        right: 30+"vh"
     }, 300);
     $(".racing-setup").animate({
         left: 0
@@ -337,10 +337,10 @@ $(document).on('click', '#setup-race-accept', function(e){
                                         AmountOfLaps: laps,
                                     }))
                                     $(".racing-overview").animate({
-                                        left: 0+"vh"
+                                        right: 0+"vh"
                                     }, 300)
                                     $(".racing-setup").animate({
-                                        left: -30+"vh"
+                                        right: -30+"vh"
                                     }, 300, function(){
                                         $(".racing-setup-information-distance").html('Select a Track');
                                         $(".racing-setup-information-creator").html('Select a Track');
@@ -371,10 +371,10 @@ $(document).on('click', '#setup-race-cancel', function(e){
     e.preventDefault();
 
     $(".racing-overview").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 300);
     $(".racing-setup").animate({
-        left: -30+"vh"
+        right: -30+"vh"
     }, 300, function(){
         $(".racing-setup-information-distance").html('Select a Track');
         $(".racing-setup-information-creator").html('Select a Track');
@@ -420,10 +420,10 @@ $(document).on('click', '.racing-leaderboards-button', function(e){
     e.preventDefault();
 
     $(".racing-leaderboard").animate({
-        left: -30+"vh"
+        right: -30+"vh"
     }, 300)
     $(".racing-overview").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 300)
 });
 
@@ -444,9 +444,9 @@ $(document).on('click', '#leaderboards-race', function(e){
     });
 
     $(".racing-overview").animate({
-        left: 30+"vh"
+        right: 30+"vh"
     }, 300)
     $(".racing-leaderboard").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 300)
 });

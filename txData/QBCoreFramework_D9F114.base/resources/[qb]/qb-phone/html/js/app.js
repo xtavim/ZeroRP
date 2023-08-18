@@ -269,10 +269,10 @@ $(document).on('click', '.phone-home-container', function(event){
                 setTimeout(function(){
                     $(".whatsapp-chats").css({"display":"block"});
                     $(".whatsapp-chats").animate({
-                        left: 0+"vh"
+                        right: 0+"vh"
                     }, 1);
                     $(".whatsapp-openedchat").animate({
-                        left: -30+"vh"
+                        right: -30+"vh"
                     }, 1, function(){
                         $(".whatsapp-openedchat").css({"display":"none"});
                     });
@@ -283,10 +283,10 @@ $(document).on('click', '.phone-home-container', function(event){
         } else if (QB.Phone.Data.currentApplication == "bank") {
             if (CurrentTab == "invoices") {
                 setTimeout(function(){
-                    $(".bank-app-invoices").animate({"left": "30vh"});
+                    $(".bank-app-invoices").animate({"right": "30vh"});
                     $(".bank-app-invoices").css({"display":"none"})
                     $(".bank-app-accounts").css({"display":"block"})
-                    $(".bank-app-accounts").css({"left": "0vh"});
+                    $(".bank-app-accounts").css({"right":"0vh"});
 
                     var InvoicesObjectBank = $(".bank-app-header").find('[data-headertype="invoices"]');
                     var HomeObjectBank = $(".bank-app-header").find('[data-headertype="accounts"]');
@@ -332,10 +332,10 @@ QB.Phone.Functions.Close = function() {
                 setTimeout(function(){
                     $(".whatsapp-chats").css({"display":"block"});
                     $(".whatsapp-chats").animate({
-                        left: 0+"vh"
+                        right: 0+"vh"
                     }, 1);
                     $(".whatsapp-openedchat").animate({
-                        left: -30+"vh"
+                        right: -30+"vh"
                     }, 1, function(){
                         $(".whatsapp-openedchat").css({"display":"none"});
                     });

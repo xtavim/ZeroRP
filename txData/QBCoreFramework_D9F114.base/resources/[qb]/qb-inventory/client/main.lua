@@ -750,7 +750,7 @@ RegisterCommand('inventory', function()
                 if vehicle ~= 0 and vehicle ~= nil then
                     local pos = GetEntityCoords(ped)
                     local dimensionMin, dimensionMax = GetModelDimensions(GetEntityModel(vehicle))
-		    local trunkpos = GetOffsetFromEntityInWorldCoords(vehicle, 0.0, (dimensionMin.y), 0.0)
+		            local trunkpos = GetOffsetFromEntityInWorldCoords(vehicle, 0.0, (dimensionMin.y), 0.0)
                     if (IsBackEngine(GetEntityModel(vehicle))) then
                         trunkpos = GetOffsetFromEntityInWorldCoords(vehicle, 0.0, (dimensionMax.y), 0.0)
                     end

@@ -16,7 +16,7 @@ Config.DefaultColor = 'rgb(19, 28, 74)' -- The default color of the box of the p
 Config.LockedColor = 'rgb(219 58 58)' -- The color of the box of the popup text if Config.ChangeColor is true and the door is locked
 Config.UnlockedColor = 'rgb(27 195 63)' -- The color of the box of the popup text if Config.ChangeColor is true and the door is unlocked
 Config.UseDoorLabelText = false -- Will use the LABEL field as the nui text instead of locked/unlocked
-Config.DoorDebug = true -- Enable DRAWTEXT in the world at the coords where the door 'center' is
+Config.DoorDebug = false -- Enable DRAWTEXT in the world at the coords where the door 'center' is
 Config.RemoteTriggerDistance = 15.0 -- This is how far from your camera the raycast will go to try to hit something solid
 Config.RemoteTriggerMinDistance = 5.0 -- This is the minimum distance required for the raycast hit to count near a door. It will take the larger two between this and 'distance' option
 

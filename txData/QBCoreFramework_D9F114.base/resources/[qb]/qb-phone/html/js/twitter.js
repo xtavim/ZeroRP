@@ -30,8 +30,8 @@ $(document).on('click', '.twitter-footer-tab', function(e){
         if (HashtagOpen) {
             event.preventDefault();
 
-            $(".twitter-hashtag-tweets").css({"left": "30vh"});
-            $(".twitter-hashtags").css({"left": "0vh"});
+            $(".twitter-hashtag-tweets").css({"right": "30vh"});
+            $(".twitter-hashtags").css({"right":"0vh"});
             $(".twitter-new-tweet").css({"display":"block"});
             $(".twitter-hashtags").css({"display":"block"});
             HashtagOpen = false;
@@ -42,10 +42,10 @@ $(document).on('click', '.twitter-footer-tab', function(e){
 
             $(".twitter-hashtags").css({"display":"block"});
             $(".twitter-hashtag-tweets").animate({
-                left: 30+"vh"
+                right: 30+"vh"
             }, 150);
             $(".twitter-hashtags").animate({
-                left: 0+"vh"
+                right: 0+"vh"
             }, 150);
             HashtagOpen = false;
         }
@@ -277,9 +277,9 @@ $(document).on('click', '.hashtag-tag-text', function(e){
             QB.Phone.Notifications.LoadHashtagMessages(HashtagData.messages);
         });
 
-        $(".twitter-hashtag-tweets").css({"display":"block", "left":"30vh"});
-        $(".twitter-hashtag-tweets").css({"left": "0vh"});
-        $(".twitter-hashtags").css({"left": "-30vh"});
+        $(".twitter-hashtag-tweets").css({"display":"block", "right":"30vh"});
+        $(".twitter-hashtag-tweets").css({"right":"0vh"});
+        $(".twitter-hashtags").css({"right":"-30vh"});
         $(".twitter-hashtags").css({"display":"none"});
         HashtagOpen = true;
 
@@ -357,12 +357,12 @@ $(document).on('click', '.twitter-hashtag', function(event){
 
     QB.Phone.Notifications.LoadHashtagMessages(TweetData.messages);
 
-    $(".twitter-hashtag-tweets").css({"display":"block", "left":"30vh"});
+    $(".twitter-hashtag-tweets").css({"display":"block", "right":"30vh"});
     $(".twitter-hashtag-tweets").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 150);
     $(".twitter-hashtags").animate({
-        left: -30+"vh"
+        right: -30+"vh"
     }, 150, function(){
         $(".twitter-hashtags").css({"display":"none"});
     });

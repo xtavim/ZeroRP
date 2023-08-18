@@ -4,7 +4,7 @@
     display: none;
     height: 100%;
     width: 100%;
-    background: rgb(36, 36, 36);
+    background: rgb(5, 5, 5);
     overflow: hidden;
 }
 
@@ -17,7 +17,7 @@
     display: block;
     height: 14vh;
     width: 100%;
-    background: rgb(36, 36, 36);
+    background: rgb(5, 5, 5);
 }
 
 #mail-header-text {
@@ -27,6 +27,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.5vh;
     color: white;
+    font-weight: bold;
 }
 
 #mail-header-mail {
@@ -125,7 +126,7 @@
     background: rgb(36, 36, 36);
     overflow: hidden;
     top: 0;
-    left: -30vh;
+    right: -30vh;
 }
 
 .opened-mail-header {
@@ -284,6 +285,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.8vh;
     color: white;
+    font-weight: bold;
 }
 
 #advert-header-name {
@@ -375,7 +377,7 @@
     top: 0;
     background: rgb(36, 36, 36);
     overflow: hidden;
-    left: -30vh;
+    right: -30vh;
 }
 
 .new-advert-footer {
@@ -420,6 +422,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.8vh;
     color: white;
+    font-weight: bold;
 }
 
 #advert-new-url{

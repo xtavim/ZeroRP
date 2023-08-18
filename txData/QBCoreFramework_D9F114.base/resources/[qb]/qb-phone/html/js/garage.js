@@ -4,10 +4,10 @@ $(document).on('click', '.garage-vehicle', function(e){
     e.preventDefault();
 
     $(".garage-homescreen").animate({
-        left: 30+"vh"
+        right: 30+"vh"
     }, 200);
     $(".garage-detailscreen").animate({
-        left: 0+"vh"
+        right: 0+"vh"
     }, 200);
 
     var Id = $(this).attr('id');
@@ -24,36 +24,43 @@ $(document).on('click', '#track-vehicle', function(e){
 });
 
 
-$(document).on('click', '#return-button', function(e){
+$(document).on('click', '#return-button-garage', function(e){
     e.preventDefault();
 
     $(".garage-homescreen").animate({
-        left: 00+"vh"
+        right: 0+"vh"
     }, 200);
     $(".garage-detailscreen").animate({
-        left: -30+"vh"
+        right: -30+"vh"
     }, 200);
 });
 
 SetupGarageVehicles = function(Vehicles) {
-    $(".garage-vehicles").html("");
+    $(".garage-vehicles").html('<div class="garage-vehicles-wrapper"></div>');
+
     if (Vehicles != null) {
         $.each(Vehicles, function(i, vehicle){
-            var Element = '<div class="garage-vehicle" id="vehicle-'+i+'"><span class="garage-vehicle-firstletter">'+vehicle.brand.charAt(0)+'</span> <span class="garage-vehicle-name">'+vehicle.fullname+'</span> </div>';
+            const carName = vehicle.brand.replace(/[0-9]/g, '').trim();
+            const carLetter = carName.charAt(0).toLocaleUpperCase();
+            
+            var Element = '<div class="garage-vehicle-row">' + 
+                '<div class="garage-vehicle" id="vehicle-'+i+'"><span class="garage-vehicle-firstletter">'+carLetter+'</span> <span class="garage-vehicle-name">'+vehicle.fullname+'</span></div>' +
+                '<i class="fa-solid fa-angle-right"></i>'
+            '</div>';
 
-            $(".garage-vehicles").append(Element);
+            $(".garage-vehicles-wrapper").append(Element);
             $("#vehicle-"+i).data('VehicleData', vehicle);
         });
     }
 }
 
 SetupDetails = function(data) {
-    $(".vehicle-brand").find(".vehicle-answer").html(data.brand);
-    $(".vehicle-model").find(".vehicle-answer").html(data.model);
-    $(".vehicle-plate").find(".vehicle-answer").html(data.plate);
-    $(".vehicle-garage").find(".vehicle-answer").html(data.garage);
-    $(".vehicle-status").find(".vehicle-answer").html(data.state);
-    $(".vehicle-fuel").find(".vehicle-answer").html(Math.ceil(data.fuel)+"%");
-    $(".vehicle-engine").find(".vehicle-answer").html(Math.ceil(data.engine / 10)+"%");
-    $(".vehicle-body").find(".vehicle-answer").html(Math.ceil(data.body / 10)+"%");
+    $("#brand-answer").html(data.brand);
+    $("#model-answer").html(data.model);
+    $("#plate-answer").html(data.plate);
+    $("#garage-answer").html(data.garage);
+    $("#status-answer").html(data.state);
+    $("#fuel-answer").html(Math.ceil(data.fuel)+"%");
+    $("#engine-answer").html(Math.ceil(data.engine / 10)+"%");
+    $("#body-answer").html(Math.ceil(data.body / 10)+"%");
 }

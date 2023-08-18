@@ -5547,4 +5547,15 @@ QBShared.Vehicles = {
         ['hash'] = `virtue`,
         ['shop'] = 'luxury',
     },
+    --[[ --CUSTOM-- ]]
+    ['toysupmk4'] = {
+        ['name'] = 'Supra MK4',
+        ['brand'] = 'Toyota',
+        ['model'] = 'toysupmk4',
+        ['price'] = 1000000,
+        ['category'] = 'super',
+        ['categoryLabel'] = 'Super',
+        ['hash'] = `toysupmk4`,
+        ['shop'] = 'luxury',
+    },
 }
