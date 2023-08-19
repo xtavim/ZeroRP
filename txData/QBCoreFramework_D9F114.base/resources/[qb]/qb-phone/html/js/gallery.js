@@ -1,106 +1,106 @@
-function setUpGalleryData(Images){
+function setUpGalleryData(Images) {
     $(".gallery-images").html("");
     if (Images != null) {
-        $.each(Images, function(i, image){
-            var Element = '<div class="gallery-image"><img src="'+image.image+'" alt="'+image.citizenid+'" class="thumbnail"></div>';
-            
+        $.each(Images, function (i, image) {
+            var Element = '<div class="gallery-image"><img src="' + image.image + '" alt="' + image.citizenid + '" class="thumbnail"></div>';
+
             $(".gallery-images").append(Element);
-            $("#image-"+i).data('ImageData', image);
+            $("#image-" + i).data('ImageData', image);
         });
     }
 }
 
-$(document).on('click', '.thumbnail', function(e){
+$(document).on('click', '.thumbnail', function (e) {
     e.preventDefault();
     let source = $(this).attr('src')
     // QB.Screen.popUp(source)
     $(".gallery-homescreen").animate({
-        left: -30+"vh"
+        left: -30 + "vh"
     }, 200);
     $(".gallery-detailscreen").animate({
-        right: 0+"vh"
+        right: 0 + "vh"
     }, 200);
     SetupImageDetails(source);
 });
 
-$(document).on('click', '.image', function(e){
+$(document).on('click', '.image', function (e) {
     e.preventDefault();
     let source = $(this).attr('src')
     QB.Screen.popUp(source)
 });
 
 
-$(document).on('click', '#delete-button', function(e){
+$(document).on('click', '#delete-button', function (e) {
     e.preventDefault();
     let source = $('.image').attr('src')
 
     setTimeout(() => {
-        $.post('https://qb-phone/DeleteImage', JSON.stringify({image:source}), function(Hashtags){
-            setTimeout(()=>{
+        $.post('https://qb-phone/DeleteImage', JSON.stringify({ image: source }), function (Hashtags) {
+            setTimeout(() => {
                 $('#return-button-gallery').click()
-                $.post('https://qb-phone/GetGalleryData', JSON.stringify({}), function(data){
-                    setTimeout(()=>{
+                $.post('https://qb-phone/GetGalleryData', JSON.stringify({}), function (data) {
+                    setTimeout(() => {
                         setUpGalleryData(data);
-                    },200)
+                    }, 200)
                 });
-            },200)
+            }, 200)
         })
     }, 200);
 });
 
 
-function SetupImageDetails(Image){
+function SetupImageDetails(Image) {
     $('#imagedata').attr("src", Image);
 }
-let postImageUrl="";
-function SetupPostDetails(){
+let postImageUrl = "";
+function SetupPostDetails() {
 }
 
 
-$(document).on('click', '#make-post-button', function(e){
+$(document).on('click', '#make-post-button', function (e) {
     e.preventDefault();
     let source = $('#imagedata').attr('src')
-    postImageUrl=source
+    postImageUrl = source
 
     // QB.Screen.popUp(source)
     $(".gallery-detailscreen").animate({
-        right: 30+"vh"
+        right: 30 + "vh"
     }, 200);
     $(".gallery-postscreen").animate({
-        right: 0+"vh"
+        right: 0 + "vh"
     }, 200);
     SetupPostDetails();
 });
 
 
-$(document).on('click', '#return-button-gallery', function(e){
+$(document).on('click', '#return-button-gallery', function (e) {
     e.preventDefault();
 
     $(".gallery-homescreen").animate({
-        left: 0+"vh"
+        left: 0 + "vh"
     }, 200);
     $(".gallery-detailscreen").animate({
-        right: -30+"vh"
+        right: -30 + "vh"
     }, 200);
 });
 
-$(document).on('click', '#returndetail-button', function(e){
+$(document).on('click', '#returndetail-button', function (e) {
     e.preventDefault();
     returnDetail();
-    
+
 });
 
-function returnDetail(){
+function returnDetail() {
     $(".gallery-detailscreen").animate({
-        right: 0+"vh"
+        right: 0 + "vh"
     }, 200);
     $(".gallery-postscreen").animate({
-        right: -30+"vh"
+        right: -30 + "vh"
     }, 200);
 }
 
 
-$(document).on('click', '#tweet-button', function(e){
+$(document).on('click', '#tweet-button', function (e) {
     e.preventDefault();
     var TweetMessage = $("#new-textarea").val();
     var imageURL = postImageUrl
@@ -111,11 +111,11 @@ $(document).on('click', '#tweet-button', function(e){
             Date: CurrentDate,
             Picture: QB.Phone.Data.MetaData.profilepicture,
             url: imageURL
-        }), function(Tweets){
+        }), function (Tweets) {
             QB.Phone.Notifications.LoadTweets(Tweets);
         });
         var TweetMessage = $("#new-textarea").val(' ');
-        $.post('https://qb-phone/GetHashtags', JSON.stringify({}), function(Hashtags){
+        $.post('https://qb-phone/GetHashtags', JSON.stringify({}), function (Hashtags) {
             QB.Phone.Notifications.LoadHashtags(Hashtags)
         })
         // QB.Phone.Animations.TopSlideUp(".twitter-new-tweet-tab", 450, -120);
@@ -128,25 +128,25 @@ $(document).on('click', '#tweet-button', function(e){
 });
 
 
-$(document).on('click', '#advert-button', function(e){
+$(document).on('click', '#advert-button', function (e) {
     e.preventDefault();
     var Advert = $("#new-textarea").val();
     let picture = postImageUrl;
 
     if (Advert !== "") {
         $(".advert-home").animate({
-            right: 0+"vh"
+            right: 0 + "vh"
         });
         $(".new-advert").animate({
-            right: -30+"vh"
+            right: -30 + "vh"
         });
-        if (!picture){
+        if (!picture) {
             $.post('https://qb-phone/PostAdvert', JSON.stringify({
                 message: Advert,
                 url: null
             }));
             returnDetail()
-        }else {
+        } else {
             $.post('https://qb-phone/PostAdvert', JSON.stringify({
                 message: Advert,
                 url: picture

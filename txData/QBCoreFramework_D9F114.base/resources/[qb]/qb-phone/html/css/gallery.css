@@ -14,7 +14,7 @@
     width: 100%;
     background-color: rgb(5, 5, 5);
     text-align: center;
-    line-height: 12.5vh;
+    line-height: 13.5vh;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5vh;
@@ -115,7 +115,7 @@
     margin: 0 auto;
     left: 0;
     right: 0;
-    background-color: rgb(5, 5, 5);
+    background-color: rgb(10, 10, 10);
     color: white;
     outline: none;
     resize: none;
@@ -127,7 +127,7 @@
 }
 
 #return-button-gallery {
-    top: 5.1vh;
+    top: 5.5vh;
     position: absolute;
     z-index: 1;
     left: 2vh;
@@ -138,6 +138,20 @@
     height: 2.3vh;
     width: 2.3vh;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#returndetail-button {
+    top: 5.6vh;
+    position: absolute;
+    z-index: 1;
+    left: 2vh;
+    cursor: pointer;
+    color: white;
+    height: 2.3vh;
+    width: 2.3vh;
     display: flex;
     justify-content: center;
     align-items: center;
