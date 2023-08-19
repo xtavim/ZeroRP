@@ -166,67 +166,74 @@
             <!-- Container for all application's -->
             <div class="phone-application-container">
                 <div class="settings-app">
-                    <div class="settings-app-header"><i class="fas fa-cogs"></i></div>
-
-                    <div class="settings-app-tab-appereance">
-                        <!-- <div class="settings-app-tab-header"><p>Appearance</p></div> -->
-                        <div class="settings-app-tab" data-settingstab="background">
-                            <div class="settings-tab-icon"><i class="fas fa-palette" style="color: #9b59b6;"></i></div>
-                            <div class="settings-tab-title">
-                                <p>Background</p>
-                            </div>
-                            <div class="settings-tab-description">
-                                <p>Default</p>
-                            </div>
-                        </div>
-                        <div class="settings-app-tab" data-settingstab="profilepicture">
-                            <div class="settings-tab-icon"></div>
-                            <div class="settings-tab-title">
-                                <p>Avatar</p>
-                            </div>
-                            <div class="settings-tab-description">
-                                <p>Default</p>
-                            </div>
-                        </div>
+                    <div class="settings-app-header">
+                        Definições
                     </div>
 
+                    <div class="settings-app-container">
+                        <div class="settings-app-wrapper">
+                            <div class="settings-app-tab">
+                                <div class="settings-category-row">
+                                    <div class="settings-category-icon" style="background-color: rgb(0, 174, 255)">
+                                        <i class="fa-solid fa-circle-user"></i>
+                                    </div>
+                                    <span class="settings-tab-title">Foto de Perfil</span>
+                                </div>
 
-                    <div class="settings-app-tab-information">
-                        <!-- <div class="settings-app-tab-header"><p>Infomation</p></div> -->
-                        <div class="settings-app-tab secondTab" data-settingstab="myPhone">
-                            <div class="settings-tab-icon"><i class="fas fa-phone-alt" style="color: #e67e22;"></i>
+                                <i class="fa-solid fa-angle-right"></i>
                             </div>
-                            <div class="settings-tab-title">
-                                <p>My phone number</p>
-                            </div>
-                            <div class="settings-tab-description" id="myPhoneNumber">
-                                <p>0612345678</p>
+
+                            <div class="settings-app-tab">
+                                <div class="settings-category-row">
+                                    <div class="settings-category-icon" style="background-color: rgb(0, 174, 255);">
+                                        <i class="fa-solid fa-image"></i>
+                                    </div>
+                                    <span class="settings-tab-title">Papel de Parede</span>
+                                </div>
+
+                                <i class="fa-solid fa-angle-right"></i>
                             </div>
                         </div>
-                        <div class="settings-app-tab secondTab" data-settingstab="serialNumber">
-                            <div class="settings-tab-icon"><i class="fas fa-phone-alt" style="color: #e67e22;"></i>
-                            </div>
-                            <div class="settings-tab-title">
-                                <p>Serial Number</p>
-                            </div>
-                            <div class="settings-tab-description" id="mySerialNumber">
-                                <p>0612345678</p>
+
+                        <div class="settings-app-wrapper">
+                            <div class="settings-app-tab range-container">
+                                <i class="fa-solid fa-moon"></i>
+
+                                <div class="range">
+                                    <input type="range" min="30" max="100" value="100" id="brightness-range" />
+                                </div>
+
+                                <i class="fa-solid fa-sun"></i>
                             </div>
                         </div>
-                        <div class="settings-app-tab secondTab" data-settingstab="numberrecognition">
-                            <!-- Rounded switch -->
-                            <label class="switch">
-                                <input class="numberrec-box" type="checkbox">
-                                <span class="slider round"></span>
-                            </label>
 
-                            <div class="settings-tab-icon"><i class="fas fa-user-slash" style="color: #e67e22;"></i>
+                        <div class="settings-app-wrapper">
+                            <div class="settings-app-tab">
+                                <div class="settings-category-row">
+                                    <div class="settings-category-icon" style="background-color: rgb(255, 185, 35);">
+                                        <i class="fa-solid fa-mobile"></i>
+                                    </div>
+                                    <span class="settings-tab-title">Nº Tel.</span>
+                                </div>
+
+                                <span id="myPhoneNumber" class="settings-category-value" style="color: white;"></span>
                             </div>
-                            <div class="settings-tab-title">
-                                <p>Call Anonymously</p>
-                            </div>
-                            <div class="settings-tab-description" id="numberrecognition">
-                                <p>Off</p>
+
+                            <div class="settings-app-tab">
+                                <div class="settings-category-row">
+                                    <div class="settings-category-icon" style="background-color: rgb(168, 168, 168);">
+                                        <i class="fa-solid fa-barcode"></i>
+                                    </div>
+                                    <span class="settings-tab-title">Anónimo</span>
+                                </div>
+
+                                <div class="switch-container">
+                                    <!-- Rounded switch -->
+                                    <label class="switch" id="numberrecognition">
+                                        <input id="anon-switch" class="numberrec-box" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -606,7 +613,7 @@
                                         </div>
                                         <span class="vehicle-detail">Localizar</span>
                                     </div>
-                                    
+
                                     <div class="switch-container">
                                         <!-- Rounded switch -->
                                         <label id="track-vehicle" class="switch">
@@ -845,7 +852,7 @@
 
                             <i class="crypto-action-page-transfer-crypto-input-money-icon fas fa-address-book"></i>
                             <input type="texts" class="crypto-action-page-transfer-crypto-input-walletid" required
-                                spellcheck="false" placeholder="QB-12345678">
+                                spellcheck="false" placeholder="ZRP-12345678">
 
                             <div class="crypto-action-page-buy-crypto-footer">
                                 <div class="crypto-action-page-buy-crypto-footer-button" id="transfer-crypto">

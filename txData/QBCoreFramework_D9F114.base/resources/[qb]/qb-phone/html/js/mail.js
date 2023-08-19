@@ -1,4 +1,5 @@
 var OpenedMail = null;
+const emailDomain = '@zero-rp.pt';
 
 $(document).on('click', '.mail', function(e){
     e.preventDefault();
@@ -72,7 +73,7 @@ QB.Phone.Functions.SetupMails = function(Mails) {
     }
     var MessageTime = Hourssssss + ":" + Minutessss;
 
-    $("#mail-header-mail").html(QB.Phone.Data.PlayerData.charinfo.firstname+"."+QB.Phone.Data.PlayerData.charinfo.lastname+"@qbcore.com");
+    $("#mail-header-mail").html(QB.Phone.Data.PlayerData.charinfo.firstname+"."+QB.Phone.Data.PlayerData.charinfo.lastname+emailDomain);
     $("#mail-header-lastsync").html("Last synchronized "+MessageTime);
     if (Mails !== null && Mails !== undefined) {
         if (Mails.length > 0) {

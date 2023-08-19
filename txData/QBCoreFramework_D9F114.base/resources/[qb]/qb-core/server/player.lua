@@ -82,7 +82,7 @@ function QBCore.Player.CheckPlayerData(source, PlayerData)
     PlayerData.charinfo.birthdate = PlayerData.charinfo.birthdate or '00-00-0000'
     PlayerData.charinfo.gender = PlayerData.charinfo.gender or 0
     PlayerData.charinfo.backstory = PlayerData.charinfo.backstory or 'placeholder backstory'
-    PlayerData.charinfo.nationality = PlayerData.charinfo.nationality or 'USA'
+    PlayerData.charinfo.nationality = PlayerData.charinfo.nationality or 'Português'
     PlayerData.charinfo.phone = PlayerData.charinfo.phone or QBCore.Functions.CreatePhoneNumber()
     PlayerData.charinfo.account = PlayerData.charinfo.account or QBCore.Functions.CreateAccountNumber()
     -- Metadata
@@ -138,7 +138,7 @@ function QBCore.Player.CheckPlayerData(source, PlayerData)
     if PlayerData.job and PlayerData.job.name and not QBCore.Shared.Jobs[PlayerData.job.name] then PlayerData.job = nil end
     PlayerData.job = PlayerData.job or {}
     PlayerData.job.name = PlayerData.job.name or 'unemployed'
-    PlayerData.job.label = PlayerData.job.label or 'Civilian'
+    PlayerData.job.label = PlayerData.job.label or 'Civil'
     PlayerData.job.payment = PlayerData.job.payment or 10
     PlayerData.job.type = PlayerData.job.type or 'none'
     if QBCore.Shared.ForceJobDefaultDutyAtLogin or PlayerData.job.onduty == nil then
@@ -152,7 +152,7 @@ function QBCore.Player.CheckPlayerData(source, PlayerData)
     if PlayerData.gang and PlayerData.gang.name and not QBCore.Shared.Gangs[PlayerData.gang.name] then PlayerData.gang = nil end
     PlayerData.gang = PlayerData.gang or {}
     PlayerData.gang.name = PlayerData.gang.name or 'none'
-    PlayerData.gang.label = PlayerData.gang.label or 'No Gang Affiliaton'
+    PlayerData.gang.label = PlayerData.gang.label or 'Sem Gang'
     PlayerData.gang.isboss = PlayerData.gang.isboss or false
     PlayerData.gang.grade = PlayerData.gang.grade or {}
     PlayerData.gang.grade.name = PlayerData.gang.grade.name or 'none'
@@ -630,7 +630,7 @@ function QBCore.Functions.CreateAccountNumber()
     local UniqueFound = false
     local AccountNumber = nil
     while not UniqueFound do
-        AccountNumber = 'US0' .. math.random(1, 9) .. 'QBCore' .. math.random(1111, 9999) .. math.random(1111, 9999) .. math.random(11, 99)
+        AccountNumber = 'PT50' .. math.random(1, 9) .. 'Zero-RP' .. math.random(1111, 9999) .. math.random(1111, 9999) .. math.random(11, 99)
         local query = '%' .. AccountNumber .. '%'
         local result = MySQL.prepare.await('SELECT COUNT(*) as count FROM players WHERE charinfo LIKE ?', { query })
         if result == 0 then
@@ -644,7 +644,12 @@ function QBCore.Functions.CreatePhoneNumber()
     local UniqueFound = false
     local PhoneNumber = nil
     while not UniqueFound do
-        PhoneNumber = math.random(100,999) .. math.random(1000000,9999999)
+        ptNum = {1, 2, 3, 6}
+        local temp = #ptNum
+
+        local random_ptNum = math.random(temp)
+
+        PhoneNumber = 9 .. ptNum[random_ptNum] .. math.random(1111111,9999999)
         local query = '%' .. PhoneNumber .. '%'
         local result = MySQL.prepare.await('SELECT COUNT(*) as count FROM players WHERE charinfo LIKE ?', { query })
         if result == 0 then
@@ -672,7 +677,7 @@ function QBCore.Player.CreateWalletId()
     local UniqueFound = false
     local WalletId = nil
     while not UniqueFound do
-        WalletId = 'QB-' .. math.random(11111111, 99999999)
+        WalletId = 'ZRP-' .. math.random(11111111, 99999999)
         local query = '%' .. WalletId .. '%'
         local result = MySQL.prepare.await('SELECT COUNT(*) as count FROM players WHERE metadata LIKE ?', { query })
         if result == 0 then
