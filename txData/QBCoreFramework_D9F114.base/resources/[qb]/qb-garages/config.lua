@@ -226,8 +226,8 @@ Config.Garages = {
         ["spawnPoint"] = vector4(407.92, -1646.29, 29.29, 226.39),
         ["showBlip"] = true,
         ["blipName"] = "Impound Lot",
-        ["blipNumber"] = 68,
-        ["blipColor"] = 3,
+        ["blipNumber"] = 357,
+        ["blipColor"] = 2,
         ["type"] = "depot",                --public, job, gang, depot
         ["vehicle"] = "car"                 --car, air, sea, rig
     },
