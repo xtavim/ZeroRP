@@ -46,7 +46,7 @@ $(document).on('click', '#return-button-garage', function(e){
         right: -30+"vh"
     }, 200);
 
-    $(".switch-container").hide();
+    $(".switch-container.grg").hide();
 });
 
 SetupGarageVehicles = function(Vehicles) {
@@ -81,7 +81,7 @@ SetupDetails = function(data) {
     if (data.state !== 1) {
         const isTracking = $('#' + veh.Id).attr('data-is-tracking') === 'true';
 
-        $(".switch-container").show();
+        $(".switch-container.grg").show();
         $('#track-vehicle-switch').prop('checked', isTracking)
     }
 }
