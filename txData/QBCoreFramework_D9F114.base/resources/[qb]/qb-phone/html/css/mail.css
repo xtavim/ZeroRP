@@ -14,48 +14,47 @@
 }
 
 .mail-header {
-    display: block;
-    height: 14vh;
-    width: 100%;
-    background: rgb(5, 5, 5);
-}
-
-#mail-header-text {
     position: absolute;
-    top: 5vh;
-    left: 12vh;
+    height: 9vh;
+    width: 100%;
+    background-color: rgb(5, 5, 5);
+    text-align: center;
+    line-height: 13.5vh;
+    color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5vh;
-    color: white;
     font-weight: bold;
 }
 
-#mail-header-mail {
+.mail-header-info {
     position: absolute;
-    top: 7vh;
-    left: 6vh;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.3vh;
+    top: 9vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
     color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#mail-header-mail {
+    font-size: 1.3vh;
 }
 
 #mail-header-lastsync {
-    position: absolute;
-    top: 10vh;
-    right: 1.5vh;
-    font-family: 'Poppins', sans-serif;
     font-size: 1vh;
-    color: white;
 }
 
 .mail-list {
     position: absolute;
-    width: 99%;
-    height: 44.7vh;
-    top: 12vh;
-    left: .1vh;
+    width: 100%;
+    height: 40vh;
+    top: 14vh;
     overflow-x: hidden !important;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
 }
 
 .mail-list::-webkit-scrollbar {
@@ -64,15 +63,12 @@
 
 .mail {
     position: relative;
-    height: 7.5vh;
-    width: 90%;
-    left: 15px;
-    margin-top: 2px;
-    margin-bottom: 10px;
-    transition: .05s ease-in-out;
-    background: rgba(23, 23, 23, 90%);
-    border-radius: 0.15rem;
-    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
+    width: 100%;
+    transition: all .03s;
+    padding: 1.6vh;
+
+    cursor: pointer;
+    background: rgb(10, 10, 10);
 }
 
 .mail:hover {
@@ -81,49 +77,35 @@
 }
 
 .mail-sender {
-    position: absolute;
     font-family: 'Poppins', sans-serif;
     font-size: 1.6vh;
     color: white;
-    left: 0.5vh;
-    top: 1vh;
+}
+
+.mail-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .mail-text {
-    position: absolute;
-    top: 3.3vh;
-    left: 0.5vh;
     font-family: 'Poppins', sans-serif;
     font-size: 1.15vh;
     color: white;
-    max-width: 18vh;
-    width: 16vh;
-}
-.mail-text > p {
-    white-space: nowrap;
-    display:inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    white-space: normal;
+    margin: unset !important;
 }
 
 .mail-time {
-    position: absolute;
     font-family: 'Poppins', sans-serif;
     font-size: 1.1vh;
     color: white;
-    right: 0.5vh;
-    top: 1vh;
 }
 
 .opened-mail {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: rgb(36, 36, 36);
+    background-color: rgb(5, 5, 5);
     overflow: hidden;
     top: 0;
     right: -30vh;

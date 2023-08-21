@@ -74,14 +74,17 @@ QB.Phone.Functions.SetupMails = function(Mails) {
     var MessageTime = Hourssssss + ":" + Minutessss;
 
     $("#mail-header-mail").html(QB.Phone.Data.PlayerData.charinfo.firstname+"."+QB.Phone.Data.PlayerData.charinfo.lastname+emailDomain);
-    $("#mail-header-lastsync").html("Last synchronized "+MessageTime);
+    $("#mail-header-lastsync").html("Última Sincronização às "+MessageTime);
     if (Mails !== null && Mails !== undefined) {
         if (Mails.length > 0) {
             $(".mail-list").html("");
             $.each(Mails, function(i, mail){
-                var date = new Date(mail.date);
-                var DateString = date.getDate()+" "+MonthFormatting[date.getMonth()]+" "+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes();
-                var element = '<div class="mail" id="mail-'+mail.mailid+'"><span class="mail-sender" style="font-weight: bold;">'+mail.sender+'</span> <div class="mail-text"><p>'+mail.message+'</p></div> <div class="mail-time">'+DateString+'</div></div>';
+                const date = new Date(mail.date);
+                const time = `${date.getHours()}:${date.getMinutes()}`;
+            
+                const DateString = `${date.toLocaleDateString('pt')} ${time}`;
+                
+                const element = '<div class="mail" id="mail-'+mail.mailid+'"> <div class="mail-info"><span class="mail-sender" style="font-weight: bold;">'+mail.sender+'</span> <div class="mail-time">'+DateString+'</div> </div><p class="mail-text">'+mail.message+'</p></div>';
 
                 $(".mail-list").append(element);
                 $("#mail-"+mail.mailid).data('MailData', mail);
@@ -96,14 +99,17 @@ QB.Phone.Functions.SetupMails = function(Mails) {
 var MonthFormatting = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 QB.Phone.Functions.SetupMail = function(MailData) {
-    var date = new Date(MailData.date);
-    var DateString = date.getDate()+" "+MonthFormatting[date.getMonth()]+" "+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes();
+    const date = new Date(MailData.date);
+    const time = `${date.getHours()}:${date.getMinutes()}`;
+
+    const DateString = `${date.toLocaleDateString('pt')} ${time}`;
+
     $(".mail-subject").html("<p><span style='font-weight: bold;'>"+MailData.sender+"</span><br>"+MailData.subject+"</p>");
     $(".mail-date").html("<p>"+DateString+"</p>");
     $(".mail-content").html("<p>"+MailData.message+"</p>");
 
-    var AcceptElem = '<div class="opened-mail-footer-item" id="accept-mail"><i class="fas fa-check-circle mail-icon"></i></div>';
-    var RemoveElem = '<div class="opened-mail-footer-item" id="remove-mail"><i class="fas fa-trash-alt mail-icon"></i></div>';
+    const AcceptElem = '<div class="opened-mail-footer-item" id="accept-mail"><i class="fas fa-check-circle mail-icon"></i></div>';
+    const RemoveElem = '<div class="opened-mail-footer-item" id="remove-mail"><i class="fas fa-trash-alt mail-icon"></i></div>';
 
     $(".opened-mail-footer").html("");
 

@@ -469,7 +469,7 @@ RegisterCommand('phone', function()
     end
 end)
 
-RegisterKeyMapping('phone', 'Open Phone', 'keyboard', 'M')
+RegisterKeyMapping('phone', 'Open Phone', 'keyboard', 'F1')
 
 -- NUI Callbacks
 
