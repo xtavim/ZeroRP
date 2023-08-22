@@ -82,31 +82,22 @@ RegisterNetEvent('weapons:client:AddAmmo', function(type, amount, itemData)
             local total = GetAmmoInPedWeapon(ped, weapon)
             local _, maxAmmo = GetMaxAmmo(ped, weapon)
             if total < maxAmmo then
-                QBCore.Functions.Progressbar("taking_bullets", Lang:t('info.loading_bullets'), Config.ReloadTime, false, true, {
-                    disableMovement = false,
-                    disableCarMovement = false,
-                    disableMouse = false,
-                    disableCombat = true,
-                }, {}, {}, {}, function() -- Done
-                    if QBCore.Shared.Weapons[weapon] then
-                        AddAmmoToPed(ped,weapon,amount)
-                        TaskReloadWeapon(ped)
-                        TriggerServerEvent("weapons:server:UpdateWeaponAmmo", CurrentWeaponData, total + amount)
-                        TriggerServerEvent('weapons:server:removeWeaponAmmoItem', itemData)
-                        TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemData.name], "remove")
-                        TriggerEvent('QBCore:Notify', Lang:t('success.reloaded'), "success")
-                    end
-                end, function()
-                    QBCore.Functions.Notify(Lang:t('error.canceled'), "error")
-                end)
+                if QBCore.Shared.Weapons[weapon] then
+                    AddAmmoToPed(ped,weapon,amount)
+                    TaskReloadWeapon(ped)
+                    TriggerServerEvent("weapons:server:UpdateWeaponAmmo", CurrentWeaponData, total + amount)
+                    TriggerServerEvent('weapons:server:removeWeaponAmmoItem', itemData)
+                    TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[itemData.name], "remove")
+                    TriggerEvent('QBCore:Notify', Lang:t('success.reloaded'), "success")
+                else
+                    QBCore.Functions.Notify(Lang:t('error.max_ammo'), "error")
+                end
             else
-                QBCore.Functions.Notify(Lang:t('error.max_ammo'), "error")
+                QBCore.Functions.Notify(Lang:t('error.no_weapon'), "error")
             end
         else
             QBCore.Functions.Notify(Lang:t('error.no_weapon'), "error")
         end
-    else
-        QBCore.Functions.Notify(Lang:t('error.no_weapon'), "error")
     end
 end)
 

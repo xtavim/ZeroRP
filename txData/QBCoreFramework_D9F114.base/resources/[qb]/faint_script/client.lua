@@ -4,7 +4,7 @@ Citizen.CreateThread(function()
 
  	while true do
  		Citizen.Wait(0)
- 		if IsControlJustReleased(1, 303) then
+ 		if IsControlJustReleased(1, 20) then
  			isRagdolling = (isRagdolling + 1) % 2
 		end
  		if isRagdolling == 1 then

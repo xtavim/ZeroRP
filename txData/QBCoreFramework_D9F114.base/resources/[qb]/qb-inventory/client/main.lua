@@ -803,7 +803,9 @@ RegisterKeyMapping('inventory', Lang:t("inf_mapping.opn_inv"), 'keyboard', Confi
 RegisterCommand('hotbar', function()
     isHotbar = not isHotbar
     if not PlayerData.metadata["isdead"] and not PlayerData.metadata["inlaststand"] and not PlayerData.metadata["ishandcuffed"] and not IsPauseMenuActive() then
-        ToggleHotbar(isHotbar)
+        if Config.Hotbar then 
+            ToggleHotbar(isHotbar)
+        end
     end
 end, false)
 
@@ -1121,6 +1123,18 @@ CreateThread(function()
             end
         end
         Wait(sleep)
+    end
+end)
+
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(0)
+		local ped = PlayerPedId()
+            	if IsPedArmed(ped, 6) then
+	    	DisableControlAction(1, 140, true)
+            	DisableControlAction(1, 141, true)
+            	DisableControlAction(1, 142, true)
+        end
     end
 end)
 
